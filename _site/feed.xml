@@ -1,0 +1,793 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-05-22T21:51:08+02:00</updated><id>http://localhost:4000/</id><title type="html">Otniel-Bogdan Mercea</title><subtitle>PhD student Portfolio</subtitle><author><name>Otniel-Bogdan Mercea</name><email>otimercea@gmail.com</email></author><entry><title type="html">Learning chinese, my experience</title><link href="http://localhost:4000/learning-chinese/" rel="alternate" type="text/html" title="Learning chinese, my experience" /><published>2019-01-26T19:00:00+01:00</published><updated>2019-01-26T19:00:00+01:00</updated><id>http://localhost:4000/learning-chinese</id><content type="html" xml:base="http://localhost:4000/learning-chinese/">&lt;p&gt;My learning chinese journey has been lasting for years now and I would like to share my adventure (with a tech point of view) as well as give some tips that you might find useful if you are getting started.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h1 id=&quot;flashcards&quot;&gt;Flashcards&lt;/h1&gt;
+
+&lt;p&gt;Learning a new language in general, takes time and energy, and constant practice. Chinese has different origin than my mother tongue (french) and it thus makes it harder to memorize the vocabulary that you will learn. Chinese’s logic and etymology are completely different than latin based languages.
+I found myself struggling remembering some words that had no single similarities with the translations to the languages I know, which can be discouraging.&lt;/p&gt;
+
+&lt;p&gt;I read a lot of articles about how to be more efficient at learning a language as it can be really time consuming. You can either spend more time on it or be more efficient at it (or both)!&lt;/p&gt;
+
+&lt;p&gt;One thing i found many times recommended on the internet were flashcards. Flashcards are a simple method, a front and back card. Front is whatever you are trying to memorize, it could be a word, sentence but could also be a sound, an image etc. On the back is the solution, it’s what should come to your mind when you see the front.&lt;/p&gt;
+
+&lt;p&gt;Once you flip the card you get to see the solution and grade your result. You are giving the grade yourself, it is no point to cheat, you’d better be honest if you wanna improve! The app i am using has 4 grades &lt;em&gt;fail, hard, good&lt;/em&gt; and &lt;em&gt;easy&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Here is an example, from the app &lt;em&gt;AnkiApp&lt;/em&gt;.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Front&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Back&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/images/flashcard_front.png&quot; alt=&quot;front&quot; /&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/images/flashcard_back.png&quot; alt=&quot;back&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Once you chose a grade it goes to the next card and so on until you reviewed N cards, N being a setting that you can change, usually from 10 to 20.
+The good thing about it is that you’ll tend to be given the cards that you did not memorize, i.e. the cards you gave &lt;em&gt;fail&lt;/em&gt; or &lt;em&gt;hard&lt;/em&gt;. This way you won’t spend too much time on the cards you know but mainly on the ones you don’t, even if sometimes it will give you cards you graded &lt;em&gt;easy&lt;/em&gt; just to make sure you didn’t forget it!&lt;/p&gt;
+
+&lt;p&gt;There are plenty of flashcards app you can use online, most famous being &lt;a href=&quot;https://apps.ankiweb.net&quot;&gt;&lt;strong&gt;Anki&lt;/strong&gt;&lt;/a&gt; and &lt;a href=&quot;https://www.ankiapp.com&quot;&gt;&lt;strong&gt;AnkiApp&lt;/strong&gt;&lt;/a&gt;.
+They both have a mobile and desktop version with account management that lets you revise your own decks on both platforms.
+I personally prefer AnkiApp as it got a free version on MacOS, which is not the case for Anki, it’s about 25 bucks.&lt;/p&gt;
+
+&lt;p&gt;Great thing about both those apps is that they usually have a nice “marketplace”, with a lot of people creating and sharing decks that you can download and instantly use on your device! For example, for HSK (official chinese language exam), you can find plenty of cards for the vocabulary (official vocabulary list).&lt;/p&gt;
+
+&lt;p&gt;However as soon as you want to create your own cards, it is getting quite tricky as writing them down through your phone or even through the web/desktop version can be time consuming. The great thing about making your own flashcards is that first, you choose the content you want to revise, if there is a word you want to memorize just make the flashcard and you’ll naturally learn it in the next days with the new cards.&lt;/p&gt;
+
+&lt;p&gt;That’s why I created a small set of simple scripts that allow me to create flashcards automatically from a list of words that I want to memorize. In my case, learning chinese, what I needed was a way to take a list of chinese characters as input (also called hanzi), and generate all the flashcards so that I can directly review them on my phone.&lt;/p&gt;
+
+&lt;p&gt;In the next chapter I’ll quickly describe the script I developed. You can later find available flashcards that I created below.&lt;/p&gt;
+
+&lt;h2 id=&quot;flashcards-generation&quot;&gt;Flashcards generation&lt;/h2&gt;
+
+&lt;p&gt;I found that great python library called pinyin &lt;a href=&quot;http://pinyin.lxyu.net&quot;&gt;&lt;strong&gt;pinyin&lt;/strong&gt;&lt;/a&gt; that gives you, from a given hanzi (你好): the translation (hello) and the pinyin (nĭ hăo) (phonetic translation in latin alphabet and keyboard input method).&lt;/p&gt;
+
+&lt;p&gt;Once I get that I can simply write them to a tsv format (tabs separated values) that can thus be read by most Anki clients, including the two I mentioned earlier. I also added tags management, which lets you create some tags for each word so that you can later filter them by tags, which can be useful for example if you wanna differentiate verbs from noun, or differentiate the ones you got in textbook from the ones you found online etc.&lt;/p&gt;
+
+&lt;p&gt;If you are interested to use it to create your own or to reuse it for something else feel free. Functions are generic and can be use for anything, not only hanzi.&lt;/p&gt;
+
+&lt;p&gt;Check out the github repository &lt;a href=&quot;https://github.com/RafaelCartenet/hanzi_to_anki&quot;&gt;&lt;em&gt;hanzi to anki&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;available-flashcards&quot;&gt;Available flashcards&lt;/h2&gt;
+
+&lt;p&gt;I have made available my flashcards so that everyone can use them.
+You can download the raw files and import them on the web or desktop applications.&lt;/p&gt;
+
+&lt;p&gt;You can find them all on github, &lt;a href=&quot;https://github.com/RafaelCartenet/hsk_flashcards&quot;&gt;&lt;em&gt;hsk flashcards&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;I created flashcards especially for the books &lt;strong&gt;HSK Standard Course&lt;/strong&gt; which is the book used in many chinese schools including mine.&lt;/p&gt;
+
+&lt;p&gt;Each HSK level has its own book (or more) and is divided in lessons. What I particularly like is to be able to revise only the vocabulary from the last lesson you had or all the lessons you attended till now, to be always up to date. If you just start preparing HSK4 and you get all the 600 flashcards at the same time to revise, you’re gonna have a hard time. Instead, having only the words you learned during the previous course/lesson will make you feel confident.&lt;/p&gt;
+
+&lt;p&gt;I created two tags,&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;em&gt;textbook&lt;/em&gt; for all the words that are introduced from the textbook. All the cards without that tag are words I did not know during that lesson and that I added. They might be from HSK3 or less or totally different words.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;LESSON.SUBLESSON&lt;/em&gt; in order to classify cards according to the lessons we had. Each lesson is covered in three parts (sub lessons)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;You will find below the link to the different flashcards sets.&lt;/p&gt;
+
+&lt;h3 id=&quot;hsk-3&quot;&gt;HSK 3&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Lesson&lt;/th&gt;
+      &lt;th&gt;Raw file&lt;/th&gt;
+      &lt;th&gt;AnkiWeb link&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;All lessons&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://raw.githubusercontent.com/RafaelCartenet/hsk_flashcards/master/output_flashcards/hsk3/all_lessons.tsv&quot; download=&quot;&quot;&gt;Raw file&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;/&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Lesson 1&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://raw.githubusercontent.com/RafaelCartenet/hsk_flashcards/master/output_flashcards/hsk3/lesson_1.tsv&quot; download=&quot;&quot;&gt;Raw file&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;/&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Lesson 2&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://raw.githubusercontent.com/RafaelCartenet/hsk_flashcards/master/output_flashcards/hsk3/lesson_2.tsv&quot; download=&quot;&quot;&gt;Raw file&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;/&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Lesson 3&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://raw.githubusercontent.com/RafaelCartenet/hsk_flashcards/master/output_flashcards/hsk3/lesson_3.tsv&quot; download=&quot;&quot;&gt;Raw file&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;/&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Lesson 4&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://raw.githubusercontent.com/RafaelCartenet/hsk_flashcards/master/output_flashcards/hsk3/lesson_4.tsv&quot; download=&quot;&quot;&gt;Raw file&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;/&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Lesson 5&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://raw.githubusercontent.com/RafaelCartenet/hsk_flashcards/master/output_flashcards/hsk3/lesson_5.tsv&quot; download=&quot;&quot;&gt;Raw file&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;/&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Lesson 6&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://raw.githubusercontent.com/RafaelCartenet/hsk_flashcards/master/output_flashcards/hsk3/lesson_6.tsv&quot; download=&quot;&quot;&gt;Raw file&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;/&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Lesson 7&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://raw.githubusercontent.com/RafaelCartenet/hsk_flashcards/master/output_flashcards/hsk3/lesson_7.tsv&quot; download=&quot;&quot;&gt;Raw file&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;/&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Lesson 8&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://raw.githubusercontent.com/RafaelCartenet/hsk_flashcards/master/output_flashcards/hsk3/lesson_8.tsv&quot; download=&quot;&quot;&gt;Raw file&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;/&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Lesson 9&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://raw.githubusercontent.com/RafaelCartenet/hsk_flashcards/master/output_flashcards/hsk3/lesson_9.tsv&quot; download=&quot;&quot;&gt;Raw file&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;/&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Lesson 10&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://raw.githubusercontent.com/RafaelCartenet/hsk_flashcards/master/output_flashcards/hsk3/lesson_10.tsv&quot; download=&quot;&quot;&gt;Raw file&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;/&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Lesson 11&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://raw.githubusercontent.com/RafaelCartenet/hsk_flashcards/master/output_flashcards/hsk3/lesson_11.tsv&quot; download=&quot;&quot;&gt;Raw file&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;/&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Lesson 12&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://raw.githubusercontent.com/RafaelCartenet/hsk_flashcards/master/output_flashcards/hsk3/lesson_12.tsv&quot; download=&quot;&quot;&gt;Raw file&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;/&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Lesson 13&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://raw.githubusercontent.com/RafaelCartenet/hsk_flashcards/master/output_flashcards/hsk3/lesson_13.tsv&quot; download=&quot;&quot;&gt;Raw file&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;/&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Lesson 14&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://raw.githubusercontent.com/RafaelCartenet/hsk_flashcards/master/output_flashcards/hsk3/lesson_14.tsv&quot; download=&quot;&quot;&gt;Raw file&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;/&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Lesson 15&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://raw.githubusercontent.com/RafaelCartenet/hsk_flashcards/master/output_flashcards/hsk3/lesson_15.tsv&quot; download=&quot;&quot;&gt;Raw file&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;/&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Lesson 16&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://raw.githubusercontent.com/RafaelCartenet/hsk_flashcards/master/output_flashcards/hsk3/lesson_16.tsv&quot; download=&quot;&quot;&gt;Raw file&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;/&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Lesson 17&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://raw.githubusercontent.com/RafaelCartenet/hsk_flashcards/master/output_flashcards/hsk3/lesson_17.tsv&quot; download=&quot;&quot;&gt;Raw file&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;/&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Lesson 18&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://raw.githubusercontent.com/RafaelCartenet/hsk_flashcards/master/output_flashcards/hsk3/lesson_18.tsv&quot; download=&quot;&quot;&gt;Raw file&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;/&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Lesson 19&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://raw.githubusercontent.com/RafaelCartenet/hsk_flashcards/master/output_flashcards/hsk3/lesson_19.tsv&quot; download=&quot;&quot;&gt;Raw file&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;/&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Lesson 20&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://raw.githubusercontent.com/RafaelCartenet/hsk_flashcards/master/output_flashcards/hsk3/lesson_20.tsv&quot; download=&quot;&quot;&gt;Raw file&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;/&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;hsk-4&quot;&gt;HSK 4&lt;/h3&gt;
+
+&lt;p&gt;On going&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Lesson&lt;/th&gt;
+      &lt;th&gt;Raw file&lt;/th&gt;
+      &lt;th&gt;AnkiWeb link&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Lesson 1&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://raw.githubusercontent.com/RafaelCartenet/hsk_flashcards/master/output_flashcards/hsk4/lesson_1.tsv&quot; download=&quot;&quot;&gt;Raw file&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;/&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Lesson 2&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://raw.githubusercontent.com/RafaelCartenet/hsk_flashcards/master/output_flashcards/hsk4/lesson_2.tsv&quot; download=&quot;&quot;&gt;Raw file&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;/&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Lesson 3&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://raw.githubusercontent.com/RafaelCartenet/hsk_flashcards/master/output_flashcards/hsk4/lesson_3.tsv&quot; download=&quot;&quot;&gt;Raw file&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;/&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Lesson 4&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://raw.githubusercontent.com/RafaelCartenet/hsk_flashcards/master/output_flashcards/hsk4/lesson_4.tsv&quot; download=&quot;&quot;&gt;Raw file&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;/&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Lesson 5&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://raw.githubusercontent.com/RafaelCartenet/hsk_flashcards/master/output_flashcards/hsk4/lesson_5.tsv&quot; download=&quot;&quot;&gt;Raw file&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;/&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</content><author><name>Otniel-Bogdan Mercea</name><email>otimercea@gmail.com</email></author><summary type="html">My learning chinese journey has been lasting for years now and I would like to share my adventure (with a tech point of view) as well as give some tips that you might find useful if you are getting started.</summary></entry><entry><title type="html">AlphaStar, DeepMind’s new success story</title><link href="http://localhost:4000/alphastar/" rel="alternate" type="text/html" title="AlphaStar, DeepMind's new success story" /><published>2019-01-26T19:00:00+01:00</published><updated>2019-01-26T19:00:00+01:00</updated><id>http://localhost:4000/alphastar</id><content type="html" xml:base="http://localhost:4000/alphastar/">&lt;p&gt;&lt;strong&gt;They did it!&lt;/strong&gt; DeepMind, the successful inventors of AlphaGo, the Go game AI that defeated the professional korean player Lee Sedol, just released a new amazing AI agent: AlphaStar, for the well-known strategy game Starcraft 2.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;As a huge fan of DeepMind for what they’ve achieved so far and an ex amateur player of the game, I followed these events meticulously, and I must say I got completely amazed by this “prototype” they just revealed on January 24th. The goal of this article is to give a simple yet decent analysis about what’s the hype is all about. I might express subjectives ideas at some points but will try to be as objective as possible, feel free to let me know your opinion / comments about it.&lt;/p&gt;
+
+&lt;h1 id=&quot;brief-introduction-to-starcraft-2&quot;&gt;Brief introduction to Starcraft 2&lt;/h1&gt;
+
+&lt;p&gt;One shall always start by definitions, Starcraft 2 is a RTS game (Real-Time Strategy game), created by Blizzard.
+The goal of the game is pretty simple, collect resources, build units and destroy your opponent, simple as that. It includes three races that you can play, each got its different diverse units and mechanics, allowing the players to to create a huge variety of army compositions to defeat their enemy. The game has been published in 2010, and has been since then a really impressive game where players from all over the world have been competing and improving continuously over the years.&lt;/p&gt;
+
+&lt;p&gt;What’s interesting about Starcraft 2 is that the game has always been pretty balanced regarding strategies, and never ever someone found one that would beat all the other. The mind set about the game, often called “meta”, is constantly changing, thanks to the community and game’s evolutions. For these reasons, in order to be a great player, not only you need to master a set of strategies, but also being able to understand what’s your opponent is constantly doing or even thinking.&lt;/p&gt;
+
+&lt;p&gt;Starcraft 2 has also been known as the competitve game with the most actions per minute needed, also called APM (clicks and pressed keys). Current professional have an average of 400 APM and can reach up to 500/600 actions per minutes at key times of the game. This will be important later in the article.&lt;/p&gt;
+
+&lt;figure&gt;
+  
+&lt;img src=&quot;/images/alphastar-apm.gif&quot; alt=&quot;Foo&quot; /&gt;
+
+  &lt;figcaption&gt;Starcraft 2 pro player APM.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;h1 id=&quot;solving-games-to-achieve-ai-milestones&quot;&gt;Solving games to achieve AI Milestones&lt;/h1&gt;
+
+&lt;p&gt;Let’s get into it. If you are a fan of AI and never heard of DeepMind, you’re missing out something. Founded in 2010 by top AI researchers on the planet, they dedicated themselves mainly on a promising field: Reinforcement Learning. As one of the leading companies regarding AI, they develop and apply state of the art methods to various domains including Medical Research or Speech Generation.&lt;/p&gt;
+
+&lt;p&gt;In the history of technology, key steps have been achieved by the invention of new machines, new mechanisms or molecules that scientists would discover. Nowadays, rules have changed a little bit, AI research’s milestones are usually achieved thanks to AI agents winning over human players on games, more complicated each time. That might sound weird, but it is actually legit if you think about it.&lt;/p&gt;
+
+&lt;p&gt;Players develop strong problem solving skills when mastering the game. Every decision a human takes in a game (and even in his life) is itself the result of an algorithm, just like Yuval Noah Harari likes to mention in his book &lt;a href=&quot;https://www.ynharari.com/book/homo-deus/&quot;&gt;Homo Deus&lt;/a&gt;. All the decisions we take come from the result of a decision-making process that runs inside our brain, aiming for a reward in a soon or further future.&lt;/p&gt;
+
+&lt;p&gt;In a simple game like chess, the entire possible actions set is quite limited as the board is relatively small, but in your everyday life, the number of actions you can take, is infinite.
+By beating professional gamers using AI, researchers are developing complex algorithms, including neural network architectures, that are able to solve really complex decision-making related problems. The same algorithms can be sometimes directly used to solve real life issues like medical ones.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;Demis Hassabis&lt;/strong&gt; (DeepMind CEO): “… While StarCraft is ‘just’ a (very complex!) game, I’m excited that the techniques behind #AlphaStar could be useful in other problems such as weather prediction &amp;amp; climate modeling, which also involve predictions over very long sequences. Peer-reviewed paper is underway.””&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Some sceptic people might believe that these geniuses are wasting their time and energy on games and could tackle real world dramatic problems but they are mistaken. I like to say that AI scientists experiment on games just like neuroscientists experiment on rats.&lt;/p&gt;
+
+&lt;p&gt;By “Solving games” I mean creating an AI better than any human player. The first impressive AI agent that could beat pro players was &lt;a href=&quot;https://en.wikipedia.org/wiki/Deep_Blue_(chess_computer)&quot;&gt;DeepBlue&lt;/a&gt;, a Chess AI that defeated Kasparov, the at-the-time world champion. DeepMind started with simple games, including &lt;a href=&quot;https://deepmind.com/research/publications/playing-atari-deep-reinforcement-learning/&quot;&gt;Atari Games&lt;/a&gt;, the &lt;a href=&quot;https://deepmind.com/research/alphago/&quot;&gt;Go Game&lt;/a&gt; with the recent new ultimate version &lt;a href=&quot;https://deepmind.com/blog/alphago-zero-learning-scratch/&quot;&gt;AlphaGo Zero&lt;/a&gt;, and now &lt;strong&gt;Starcraft 2, known as one of the most difficult strategy game&lt;/strong&gt;
+The order of these achievements really matters. Indeed, games that got ‘solved’ by AI became more and more complex. By complex we mean that the set of possible actions became wider and wider, making the search of the best move nearly impossible.
+The number of possible boards in the chess game is not that huge. However, the number of possible boards in Go is insanely high. In Starcraft 2, the of possible states is hardly even computable. Indeed, the map, could be considered as a board where each cell would be a pixel where a unit could be standing, which makes it unfeasible to compute.&lt;/p&gt;
+
+&lt;p&gt;The other key difference between those previous games and Starcraft 2 is that the &lt;strong&gt;information&lt;/strong&gt; a player get is different. For board games we say that the information type is &lt;strong&gt;perfect&lt;/strong&gt;, meaning that at a given moment of the game, you have perfect information regarding what your opponent’s action, you can always look at your opponent’s side of the board. In Starcraft 2, information is most of the time &lt;strong&gt;hidden&lt;/strong&gt;. By hidden we mean that both players cannot see what the other is doing unless their unit meet eachother, we also call it &lt;strong&gt;imperfect&lt;/strong&gt; information. Card games are also considered as imperfect information games as you can’t see your opponent’s card.
+As you lack knowledge about what your opponent is doing you must prepare yourselves for different potential outcomes and try to gather as much details about your oponent’s strategy during the whole game in order to get the information that you are missing.&lt;/p&gt;
+
+&lt;figure&gt;
+  
+&lt;img src=&quot;/images/alphastar-diff.png&quot; alt=&quot;Foo&quot; /&gt;
+
+  &lt;figcaption&gt;Complexity differences between Atari, Go and finally Stracraft 2. ©DeepMind&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;That said, you will understand why solving the Go Game was harder than solving Chess Game, and why solving the Stracraft 2 game, is even harder. The gap of difficulty between these games is one of the main reason why AlphaStar has been such an hype and amazing bot.&lt;/p&gt;
+
+&lt;h1 id=&quot;but-how-&quot;&gt;But how ?&lt;/h1&gt;
+
+&lt;p&gt;Two years ago, Blizzard teamed up with DeepMind to create an alternative version of the game, in order to let whoever was interested to play with automation to play with Starcraft. They open sourced a set of python libraries and an enormous dataset of previously played games in order to be able to train model. That was the beginning of a long and exciting journe, many scientists got into it. By solving mini-games that Blizzard developed, the results after several months were promising but not excellent. The mini games were part of a typical Starcraft game but were far from being as complicated as an entire game. At that time the hype around the ability for AI to defeat Starcraft decreased quite significantly … until recently, AlphaStar was born.
+DeepMind has been working around this new agent that demands a lot of training and infrastructures that few companies in the world can achieve.&lt;/p&gt;
+
+&lt;p&gt;December 19th 2018, DeepMing invited Dario “TLO” Wünsch, a german pro player to play against their new AI they called AlphaStar. The human player got defeated 5 games to 0, which was pretty surprising. TLO claimed ahead to be confident about the match and all the DeepMind were obviously really happy about the performance they managed to reach.&lt;/p&gt;
+
+&lt;p&gt;From a given board, or state in the game, one must compute all the possible actions that it can take, then evaluate what would be the best action in order to win, in a close future, or in a longer term. A human player, when facing a situation that he experienced before, would use memory to recall what’s the best action to avoid a loss, and to give himself, a chance to win the game.&lt;/p&gt;
+
+&lt;h1 id=&quot;how-good-is-it-though-&quot;&gt;How good is it though ?&lt;/h1&gt;
+
+&lt;p&gt;So far in this article, I’ve been glorifying DeepMind’s engineers and they really deserve it, what they have done is once again breathtaking. However, unfortunately, some people have been pointing out some small imperfections (that some perfectionists would claim HUGE), that are  nevertheless worth mentioning ! I would try to put to good use my knowledge about the game and the different articles and analysis I read to explain the hecks&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;WEIRD SIMPLE STRATEGY&lt;/li&gt;
+  &lt;li&gt;WEIRD APM&lt;/li&gt;
+  &lt;li&gt;NO PAPER. WAIT&lt;/li&gt;
+  &lt;li&gt;CRITICISM&lt;/li&gt;
+  &lt;li&gt;ANALYSIS OF THE GAMES. BEASTY QT&lt;/li&gt;
+  &lt;li&gt;CONCLUSION&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;More recently, DeepMind has been part the occidental trend: AI ethics. As many people, including AI researchers, got worried about the turn AI was taking in certain domains, many researchers and engineers dedicated their careers to use or develop AI in good ethical manners, that would help citizens’ life in a non-lucratic way, rather shorting off jobs. This seems to be pretty promising for the next decades, we might see some potential huge changes in the way we think of AI, and particularly the way we want to deal with it in our everyday life.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Official article from DeepMind: &lt;a href=&quot;https://deepmind.com/blog/alphastar-mastering-real-time-strategy-game-starcraft-ii/&quot;&gt;https://deepmind.com/blog/alphastar-mastering-real-time-strategy-game-starcraft-ii/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Otniel-Bogdan Mercea</name><email>otimercea@gmail.com</email></author><summary type="html">They did it! DeepMind, the successful inventors of AlphaGo, the Go game AI that defeated the professional korean player Lee Sedol, just released a new amazing AI agent: AlphaStar, for the well-known strategy game Starcraft 2.</summary></entry><entry><title type="html">Spark</title><link href="http://localhost:4000/pyspark-cheatsheet/" rel="alternate" type="text/html" title="Spark" /><published>2018-08-08T06:30:00+02:00</published><updated>2018-08-08T06:30:00+02:00</updated><id>http://localhost:4000/pyspark-cheatsheet</id><content type="html" xml:base="http://localhost:4000/pyspark-cheatsheet/">&lt;p&gt;WORK IN PROGRESS&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/Apache_Spark_logo.png&quot; alt=&quot;apache spark&quot; class=&quot;inline&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This is a simple spark cheatsheet I made when I learnt to use it for some Extract-Transform-Load operations.&lt;/p&gt;
+
+&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h1 id=&quot;general&quot;&gt;General&lt;/h1&gt;
+
+&lt;h3 id=&quot;import-sql-functions&quot;&gt;Import sql functions&lt;/h3&gt;
+&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;pyspark.sql.functions&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;F&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;object-transformations&quot;&gt;Object Transformations&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Transform to Pandas dataframe&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;pandas&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;_map_to_pandas&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rdds&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;&quot;&quot;&quot; Needs to be here due to pickling issues &quot;&quot;&quot;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DataFrame&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rdds&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))]&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;toPandas&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n_partitions&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;&quot;&quot;&quot;
+    Returns the contents of `df` as a local `pandas.DataFrame` in a speedy fashion. The DataFrame is
+    repartitioned if `n_partitions` is passed.
+    :param df:              pyspark.sql.DataFrame
+    :param n_partitions:    int or None
+    :return:                pandas.DataFrame
+    &quot;&quot;&quot;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n_partitions&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;is&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;not&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;df&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;repartition&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n_partitions&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;df_pand&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rdd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mapPartitions&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_map_to_pandas&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;collect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;df_pand&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;concat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;df_pand&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;df_pand&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;columns&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;columns&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;df_pand&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Transform to list&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# To extract the column 'column' from the pyspark dataframe df
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mylist&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;column&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;row&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;collect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;type-transformations&quot;&gt;Type transformations&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Types&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;BinaryType – Binary data.&lt;/li&gt;
+  &lt;li&gt;BooleanType – Boolean values.&lt;/li&gt;
+  &lt;li&gt;ByteType – A byte value.&lt;/li&gt;
+  &lt;li&gt;DateType – A datetime value.&lt;/li&gt;
+  &lt;li&gt;DoubleType – A floating-point double value.&lt;/li&gt;
+  &lt;li&gt;IntegerType – An integer value.&lt;/li&gt;
+  &lt;li&gt;LongType – A long integer value.&lt;/li&gt;
+  &lt;li&gt;NullType – A null value.&lt;/li&gt;
+  &lt;li&gt;ShortType – A short integer value.&lt;/li&gt;
+  &lt;li&gt;StringType – A text string.&lt;/li&gt;
+  &lt;li&gt;TimestampType – A timestamp value (typically in seconds from 1/1/1970).&lt;/li&gt;
+  &lt;li&gt;UnknownType – A value of unidentified type.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;How to import a type&lt;/p&gt;
+&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# To import integer type
+&lt;/span&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;pyspark.sql.types&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;IntegerType&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;How to cast:&lt;/p&gt;
+&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# To cast to double
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;F&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;col&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'mycolumn'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cast&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DoubleType&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;String type to date type&lt;/p&gt;
+&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;F&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;to_date&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;F&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;unix_timestamp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'date'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'yyyy-MM-dd'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cast&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;timestamp&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;join&quot;&gt;Join&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Inner join&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;df_joined&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;df_A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;df_B&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;df_A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;KEY_A&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;df_B&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;KEY_B&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;how&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'inner'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;where KEY_A is the key to join A from and KEY_B is the key to join B from.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Left/Right join&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;df_joined&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;df_A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;df_B&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;df_A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;KEY_A&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;df_B&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;KEY_B&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;how&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'right'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;df_joined&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;df_A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;df_B&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;df_A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;KEY_A&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;df_B&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;KEY_B&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;how&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'left'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;to-classify&quot;&gt;TO CLASSIFY&lt;/h1&gt;
+
+&lt;h3 id=&quot;mapping-dict&quot;&gt;MAPPING DICT&lt;/h3&gt;
+&lt;p&gt;To apply a mapping to a column given a dataframe and a mapping as a dictionary&lt;/p&gt;
+&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;itertools&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;chain&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;mapping&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;s&quot;&gt;'old_value1'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'new_value1'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;s&quot;&gt;'old_value2'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'new_value2'&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;mapping_expr&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;F&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;create_map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;F&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;chain&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mapping&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;items&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())])&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;withColumn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;mapped_valule&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mapping_expr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;getItem&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;F&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;col&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;value&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;where-function&quot;&gt;Where function&lt;/h2&gt;
+
+&lt;h3 id=&quot;is-equal--not-equal&quot;&gt;is equal / not equal&lt;/h3&gt;
+&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# keep rows where column 'int_column' values are equal to integer 5.
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;F&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;where&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;F&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;col&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'int_column'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;F&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;where&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;F&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;col&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'date_column'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'2018/12/05'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# keep rows where column 'bool_column' values are equal to boolean True.
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;F&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;where&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;F&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;col&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'bool_column'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;is-in--not-in-list&quot;&gt;is in / not in list&lt;/h3&gt;
+&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;my_list&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;23&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# keep rows
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;F&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;where&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;F&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;col&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'value'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;isin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;my_list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# skip rows Where
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;F&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;where&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;~&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;F&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;col&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'value'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;isin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;my_list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;window&quot;&gt;Window&lt;/h2&gt;
+
+&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;pyspark.sql.window&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Window&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;window&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;partitionBy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'category'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]).&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;orderBy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'revenue'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;desc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()).&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rangeBetween&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sys&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;maxsize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sys&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;maxsize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;rename-column&quot;&gt;Rename column&lt;/h2&gt;
+&lt;p&gt;df.withColumnRenamed(“colName”, “newColName”)&lt;/p&gt;
+
+&lt;h2 id=&quot;add-time-to-timestamp&quot;&gt;Add time to timestamp&lt;/h2&gt;
+&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;withColumn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'new_timestamp'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;F&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;col&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'timestamp'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;F&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;expr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'INTERVAL 2 HOURS'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;create-udf-function&quot;&gt;CREATE UDF FUNCTION&lt;/h3&gt;
+&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;square_udf_int&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;udf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;lambda&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;z&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;square&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;z&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;IntegerType&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Otniel-Bogdan Mercea</name><email>otimercea@gmail.com</email></author><summary type="html">WORK IN PROGRESS</summary></entry><entry><title type="html">MCQBot</title><link href="http://localhost:4000/mcqbot/" rel="alternate" type="text/html" title="MCQBot" /><published>2018-07-09T04:16:01+02:00</published><updated>2018-07-09T04:16:01+02:00</updated><id>http://localhost:4000/mcqbot</id><content type="html" xml:base="http://localhost:4000/mcqbot/">&lt;p&gt;MCQBot, or Multiple Choice Questions Bot is a simple NLP project I realized in June 2018. The idea is pretty simple, given a question and a set of answers, make a bot that can gives a confidence score to each choice in order to reply to the question. Number of choices is not fixed.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;Current method is pretty simple, n-grams occurrences-based, from google search content, but working quite efficiently. You can find the code on my github &lt;a href=&quot;https://github.com/RafaelCartenet/MCQbot&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;I have been running my bot over a small dataset of french questions and &lt;strong&gt;accuracy&lt;/strong&gt; is about &lt;strong&gt;85%&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;In future work, accuracy could be increased using semantic analysis or smarter search of content using different source (such as Wikipedia for example), and/or different method (key words search rather than complete question search).&lt;/p&gt;
+
+&lt;p&gt;Finally, such &lt;strong&gt;“close field”&lt;/strong&gt; question answering method could be expanded to &lt;strong&gt;“open field”&lt;/strong&gt; questions by generating a range of potential choices.
+For example, for questions such as &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Which european country ... ?&lt;/code&gt;, we could generate the list of choices (all european countries), and score each of them using this method.&lt;/p&gt;</content><author><name>Otniel-Bogdan Mercea</name><email>otimercea@gmail.com</email></author><summary type="html">MCQBot, or Multiple Choice Questions Bot is a simple NLP project I realized in June 2018. The idea is pretty simple, given a question and a set of answers, make a bot that can gives a confidence score to each choice in order to reply to the question. Number of choices is not fixed.</summary></entry><entry><title type="html">Instagram Botting</title><link href="http://localhost:4000/Instagram-Botting/" rel="alternate" type="text/html" title="Instagram Botting" /><published>2018-05-23T20:00:00+02:00</published><updated>2018-05-23T20:00:00+02:00</updated><id>http://localhost:4000/Instagram-Botting</id><content type="html" xml:base="http://localhost:4000/Instagram-Botting/">&lt;p&gt;My experience about Instagram Automation, or “Botting”.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h1 id=&quot;what-are-we-talking-about-&quot;&gt;What are we talking about ?&lt;/h1&gt;
+
+&lt;p&gt;Instagram Automation, or Botting, is the action to automate tasks a user would do on Instagram. Actions you can perform on Instagram are rather simple, liking a post, commenting a post, following an user, unfollowing an user, posting a post, deleting a post etc. Simple tasks that are thus simple to automatize.
+The goal of an Automation for Instagram is to save time for individuals or marketing people to generate some audience for an Instagram Account. The Automation (or Robot) will use your account and directly interact with people in order to try to get them follow your account, and thus increase your audience. Most of Instagram automations are designed to be running 24/7, so that you don’t have to worry nor spend time on it and just leave it do the job.&lt;/p&gt;
+
+&lt;p&gt;I have been “botting around” on Instagram for more than a year now. The goal of this article is to share my experience and my advise if you wanna get into the adventure or want to improve your current solution.&lt;/p&gt;
+
+&lt;h2 id=&quot;my-experience&quot;&gt;My experience&lt;/h2&gt;
+
+&lt;p&gt;I made my own custom bot based on a pretty efficient API-wrapper, called &lt;a href=&quot;https://github.com/instagrambot/instabot&quot;&gt;instabot&lt;/a&gt;.
+You can find several of them on the internet, depending on your favorite coding language etc. These APIs (or wrappers) often also provide some scripts in order to demo their API’s key features. These repositories sometimes even provide a script that would run 24h and automate basic actions, such as liking celebrities’ followers, unfollowing your non-followers followings etc.&lt;/p&gt;
+
+&lt;p&gt;However, let’s face it, most Instagram Automation scripts available over the internet are often pretty simple, and are not as effective as you would expect. This said, if you’re still thinking about getting into botting, you have two options:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Use some pre-made scripts that would do the job for you, select the proposed features you want and accept the results.&lt;/li&gt;
+  &lt;li&gt;Or make your own scripts to do the tasks you want, specific strategies that you imagined etc. That implies of course that you are able to code, and that you have time to spend on building it.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I chose the second option and made a bot from scratch based on the API-wrapper in order to accomplish the tasks I thought were wise for a robot to perform.&lt;/p&gt;
+
+&lt;p&gt;Before getting into details, you might ask yourself one question that I believe is interesting to tackle in the first place, &lt;strong&gt;is all of this even legal ?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;legal-aspects&quot;&gt;Legal aspects&lt;/h2&gt;
+
+&lt;p&gt;On the Instagram’s &lt;strong&gt;Terms of Use&lt;/strong&gt; you can read:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;We prohibit crawling, scraping, caching or otherwise accessing any content on the Service via automated means, including but not limited to, user profiles and photos (except as may be the result of standard search engine protocols or technologies used by a search engine with Instagram’s express consent).&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;It is well known and written everywhere, automating Instagram is prohibited&lt;/strong&gt;. We all experienced accounts interacting with us with weird comments, sometimes completely neutral, sometimes completely out of context.
+Nevertheless, you are not gonna get in trouble if you’ve been using an automation tool on your account, neither get fined. &lt;strong&gt;One of the only dramas that can happen to you is that you can get your account deleted.&lt;/strong&gt;
+It is really rare and pretty unlikely that you’ll get your account deleted, but it is important to keep it in mind.&lt;/p&gt;
+
+&lt;p&gt;Apart from that, you’re all good. If you’re ok with the idea that you might get up one morning and find out that your account doesn’t exist anymore, then you’re good to go!&lt;/p&gt;
+
+&lt;p&gt;People are usually ashamed to admit that they have been using automations in the past, because it is considered as a really controversial practice but let’s face it, it is nowadays pretty well known that bots are being used. Instagram is well aware of that, and &lt;strong&gt;in my opinion, they are not even trying to block robots&lt;/strong&gt;. Instagram engineers are well aware of the whole business about botting, but to my mind, they actually benefit from the bots:&lt;/p&gt;
+
+&lt;p&gt;Indeed, bots generate audience, and sometimes even content, why would they prohibit that? People are getting boosted by robots, which often gives them motivation. It is even getting common that bots interact with bots, which generates more audience.&lt;/p&gt;
+
+&lt;h1 id=&quot;my-advise-to-get-into-instagram-botting&quot;&gt;My advise to get into Instagram Botting&lt;/h1&gt;
+
+&lt;p&gt;I wont share any code here, this is not the goal. I am just sharing the principles I based my code on. I have been improving my robot a lot, on many different aspects and that’s what made the whole adventure interesting. Making such robot implies different skills and more thinking that you would initially think …&lt;/p&gt;
+
+&lt;p&gt;The key features you want your bot to have are:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Easy monitoring&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Efficient actions&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Low risk strategy&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Steady process&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;easy-monitoring&quot;&gt;Easy Monitoring&lt;/h2&gt;
+
+&lt;p&gt;Monitoring your whole automated system is really important. Most of the times you would rather have a robot running 24/7, however, it would never be as steady as you would like, as a matter of fact, it is pretty hard to have a working script 24/7, for these reasons keeping track of what is going on over time is really important. Here are two interesting examples, that I eventually experienced:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;You launch your script on Monday, check its status again on Friday and find out it actually mysteriously stopped on Tuesday, you lost three days of running, which is a shame.&lt;/li&gt;
+  &lt;li&gt;Now let’s imagine you are checking your script status every 30 minutes, then you are gonna be of course catching every single anomaly, but you are going to spending way too much unnecessary time on this.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Building yourself a tool to monitor the whole activity is really important. The most important indicators you wanna keep track of are:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;How good your bot did (how many followers you got, how many you lost, how many replied etc.)&lt;/li&gt;
+  &lt;li&gt;Run status (is your bot currently running, did it run the whole night etc.)&lt;/li&gt;
+  &lt;li&gt;Errors management (how many errors did your bot encounter, how often, which ones etc.)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;If you manage to get those three points easy to check, then it will make your life easier as correcting your errors, adapting your strategy, or simply improving your robot, will be &lt;strong&gt;MUCH EASIER&lt;/strong&gt;. You can’t improve a system if you dont know how well it did, nor correct a mistake if you don’t where, how or why it happened.
+Making an automation robot is a great experience of &lt;strong&gt;Trial &amp;amp; Error&lt;/strong&gt;. Change something, see how it goes, adapt it again, see how it goes etc. until you get something good enough satisfying your requirements, making the monitoring a really important aspect of your implementation.&lt;/p&gt;
+
+&lt;p&gt;The other important thing about monitoring is that you are gonna save time, a lot of time.
+Checking all the different results, or logs of your system is time consuming, and you wanna save that time. With the right monitoring processes, you can automatize all that and focus on the most important aspects.&lt;/p&gt;
+
+&lt;p&gt;Here are few ideas that you can use to help you monitor your activity:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;a web application where you would display all the things you wanna monitor&lt;/li&gt;
+  &lt;li&gt;a chatbot, that would communicate to you everything you wanna monitor
+etc.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;efficient-actions&quot;&gt;Efficient actions&lt;/h2&gt;
+
+&lt;p&gt;This is, I believe, the most important thing that you can leverage from in order to increase your bot performance.
+Having a robot running is great, but having an efficient robot is better. One shall first define the performance for such tool. &lt;strong&gt;The performance for an Instagram Automation is simple, the more followers it gets to the target account over the time, the better it is.&lt;/strong&gt;
+Most of the time, the only thing that distinguish offers on the internet is the number of followers they promise, as a metric for their performance.&lt;/p&gt;
+
+&lt;p&gt;There are two main levers you can play with when setting up your robot behavior, the number of actions it operates (per hour or/per day) and the quality of the actions.&lt;/p&gt;
+
+&lt;h2 id=&quot;steady-process&quot;&gt;Steady process&lt;/h2&gt;
+
+&lt;p&gt;As I said&lt;/p&gt;
+
+&lt;h2 id=&quot;pushing-to-the-limits&quot;&gt;Pushing to the limits&lt;/h2&gt;
+
+&lt;p&gt;As you may guessed, Instagram won’t let you perform millions of actions during a day. Instagram established limits, that even humans can reach! Indeed, maybe it happened to you that after unfollowing a certain amount of person really quickly, you got a message saying that you could not unfollow that fast and should wait for a while.
+There exists limits for all the actions, and testing them is the only way to find out what they are, approximately. Indeed, they are not fixed, and not written anywhere, when you reach the limit you’ll most likely get an error from the request. Mastering these limits is really important when it comes to maximize your efficiency.
+Keep in mind that getting close to these limits is also getting close to being banned, which happened to me before.&lt;/p&gt;
+
+&lt;h1 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h1&gt;
+
+&lt;p&gt;Making an Instagram Robot may seem a bit shameful, as it is pretty controversial and but it is not. It is actually pretty smart and the skills you develop working on that&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Errors handling:
+Handling errors (numerous of them) in a smart way is a pretty cool skill to have when you need to handle continuous script run. Having a script running 24h a day is much more complicated than it seems, and you’re gonna encounter some errors you maybe didn’t think about.&lt;/li&gt;
+  &lt;li&gt;Scheduled tasks:
+Most of bots got a set of different actions, that sometimes need to occur simultaneously. Handling them, giving them priorities etc. can sometimes be tricky.
+PLAN&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;plan&quot;&gt;PLAN&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;LEGAL ASPECTS&lt;/li&gt;
+  &lt;li&gt;INFRA STRUCTURE&lt;/li&gt;
+  &lt;li&gt;SMART AUTOMATION&lt;/li&gt;
+  &lt;li&gt;TESTING THE LIMITS&lt;/li&gt;
+  &lt;li&gt;BENEFITS&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;2 types of automation
+AUTO POSTING VS AUTO EVERYTHING&lt;/p&gt;</content><author><name>Otniel-Bogdan Mercea</name><email>otimercea@gmail.com</email></author><summary type="html">My experience about Instagram Automation, or “Botting”.</summary></entry><entry><title type="html">Optimized STMVN</title><link href="http://localhost:4000/STMVN/" rel="alternate" type="text/html" title="Optimized STMVN" /><published>2018-02-11T19:00:00+01:00</published><updated>2018-02-11T19:00:00+01:00</updated><id>http://localhost:4000/STMVN</id><content type="html" xml:base="http://localhost:4000/STMVN/">&lt;p&gt;STMVN, or ‘Short-Time Mean Variance Normalization’ is a normalization technique for sequential data, introduced in this &lt;a href=&quot;https://www.crim.ca/perso/patrick.kenny/Jahangir_nolisp2011_16_final.pdf&quot;&gt;paper&lt;/a&gt;.
+I implemented this technique in January 2018 and found a way to optimize it, regarding algorithmic efficiency&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;The idea is pretty simple, rather than doing normalization over the whole dataset, that is often practically complicated, the paper introduces a &lt;strong&gt;short-time&lt;/strong&gt; window to consider for normalization. Rather than computing the average and variance of the whole dataset and use it to normalize every single new frame, the normalized frame is computed using its neighbors’ mean and variance.&lt;/p&gt;
+
+&lt;p&gt;It theoretically seems pretty efficient, but there is one issue (not mentioned in the paper), which is that regarding algorithmic efficiency, it is pretty heavy. Indeed, when classic normalization techniques compute the mean and variance over the dataset &lt;strong&gt;only once&lt;/strong&gt; to normalize then the whole dataset, this method computes mean and variances of neighbors frame when normalizing every single frame.&lt;/p&gt;
+
+&lt;p&gt;After trying that normalization on my project at that time, I realized it gave me interesting results, promising compared to classic normalizations. But as expected, the running time exploded. I thus spent time on trying to find a way to reduce algorithmic complexity of this method.&lt;/p&gt;
+
+&lt;p&gt;You will find the code as well as the maths explained on my github, &lt;a href=&quot;https://github.com/RafaelCartenet/MFCC_STMVN&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;</content><author><name>Otniel-Bogdan Mercea</name><email>otimercea@gmail.com</email></author><summary type="html">STMVN, or ‘Short-Time Mean Variance Normalization’ is a normalization technique for sequential data, introduced in this paper. I implemented this technique in January 2018 and found a way to optimize it, regarding algorithmic efficiency</summary></entry><entry><title type="html">Bash</title><link href="http://localhost:4000/bash-cheatsheet/" rel="alternate" type="text/html" title="Bash" /><published>2017-06-16T04:16:01+02:00</published><updated>2017-06-16T04:16:01+02:00</updated><id>http://localhost:4000/bash-cheatsheet</id><content type="html" xml:base="http://localhost:4000/bash-cheatsheet/">&lt;p&gt;This is a bash cheatsheet I created when I got my hands on server remote control, process handling etc.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;gpu-related&quot;&gt;GPU related&lt;/h2&gt;
+
+&lt;p&gt;Find out the models of the GPUs&lt;/p&gt;
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;lspci | &lt;span class=&quot;nb&quot;&gt;grep&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--color&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'vga\|3d\|2d'&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Get GPUs status&lt;/p&gt;
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;nvidia-smi
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;htop:&lt;/p&gt;
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;htop
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;processes-handling&quot;&gt;Processes handling&lt;/h2&gt;
+
+&lt;p&gt;Check the processes running&lt;/p&gt;
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;ps aux | &lt;span class=&quot;nb&quot;&gt;grep &lt;/span&gt;X &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;example: ps aux | &lt;span class=&quot;nb&quot;&gt;grep &lt;/span&gt;apt&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Kill a process using its PID&lt;/p&gt;
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;kill&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-9&lt;/span&gt; PID
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;remote-control&quot;&gt;Remote control&lt;/h2&gt;
+
+&lt;p&gt;Copy from local to ssh, from ssh to local&lt;/p&gt;
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;scp &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-r&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; chemin/fichier login@serveur:chemin
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;scp &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-r&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; login@serveur:chemin/file chemin/
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Atom Remote, open distant folder on Atom&lt;/p&gt;
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;ssh &lt;span class=&quot;nt&quot;&gt;-R&lt;/span&gt; 52698:localhost:52698 rafaelcartenet@143.248.39.104
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Download content from the given url&lt;/p&gt;
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;wget URL
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;History of all different ssh commands used&lt;/p&gt;
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;history&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;grep &lt;/span&gt;ssh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Call command ID&lt;/p&gt;
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;idcommand
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;unzip&quot;&gt;Unzip&lt;/h2&gt;
+
+&lt;p&gt;Unzip tar files&lt;/p&gt;
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;tar&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-xvf&lt;/span&gt; file.tar
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Unzip tar.gz files&lt;/p&gt;
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;tar &lt;/span&gt;zxvf file.tar.gz
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;other&quot;&gt;Other&lt;/h1&gt;
+
+&lt;p&gt;Number of files in a repository/file&lt;/p&gt;
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;ls&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-1&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;wc&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-l&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;wc&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-l&lt;/span&gt; &amp;lt;filename&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Otniel-Bogdan Mercea</name><email>otimercea@gmail.com</email></author><summary type="html">This is a bash cheatsheet I created when I got my hands on server remote control, process handling etc.</summary></entry><entry><title type="html">Simple binary options trading</title><link href="http://localhost:4000/BOTAI/" rel="alternate" type="text/html" title="Simple binary options trading" /><published>2017-02-17T03:16:01+01:00</published><updated>2017-02-17T03:16:01+01:00</updated><id>http://localhost:4000/BOTAI</id><content type="html" xml:base="http://localhost:4000/BOTAI/">&lt;p&gt;Small project I realized when I was learning python and thought I could hack trading easily. I implemented really simplistic methods with a simple simulator in order to back test my strategy, which worked effectively. (back testing, not the strategy itself)&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;Github repo: &lt;a href=&quot;github.com/RafaelCartenet/BOTAI/&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;When I was learning python I gave myself some little challenges in order to get familiar with the language. One of them was competing in a lot of programming little contests, to get the basic syntax and reflexes of the language, the other one being tackling “real life” use cases with what I learned.&lt;/p&gt;
+
+&lt;p&gt;I am retro engineering this little project as I didn’t take the time to make a complete explanation at that time. The key at that time was to get familiar with OOP with Python, that is creating a little project around a set of classes and implement methods.&lt;/p&gt;
+
+&lt;p&gt;Backtesting output example:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;---------------------------------------------------------------------------------------
+|#	|Date				                |StackP  |action|amount	|result	|balance
+---------------------------------------------------------------------------------------
+|1	|2017-03-04 00:00:00+00:00	|1.06593 |Call	|1.00		|True	  |1000.00
+|2	|2017-03-04 00:05:00+00:00	|1.06628 |Call	|1.00		|False	|1000.88
+|3	|2017-03-04 00:10:00+00:00	|1.06613 |Put	  |2.14		|False	|999.88
+|4	|2017-03-04 00:15:00+00:00	|1.06622 |Call	|4.56		|False	|997.74
+|5	|2017-03-04 00:20:00+00:00	|1.06619 |Put	  |9.75		|True	  |993.18
+|6	|2017-03-04 00:25:00+00:00	|1.06615 |Call	|1.00		|False	|1001.76
+|7	|2017-03-04 00:30:00+00:00	|1.06603 |Put	  |2.14		|True	  |1000.76
+|8	|2017-03-04 00:35:00+00:00	|1.06602 |Call	|1.00		|True	  |1002.64
+|9	|2017-03-04 00:40:00+00:00	|1.06619 |Call	|1.00		|False	|1003.52
+|10	|2017-03-04 00:45:00+00:00	|1.06613 |Put	  |2.14		|False	|1002.52
+|11	|2017-03-04 00:50:00+00:00	|1.06645 |Call	|4.56		|False	|1000.38
+|12	|2017-03-04 00:55:00+00:00	|1.06625 |Put	  |9.75		|True	  |995.82
+|13	|2017-03-04 01:00:00+00:00	|1.06605 |Call	|1.00		|True	  |1004.40
+|14	|2017-03-04 01:05:00+00:00	|1.06632 |Call	|1.00		|True	  |1005.28
+|15	|2017-03-04 01:10:00+00:00	|1.06634 |Call	|1.00		|False	|1006.16
+|16	|2017-03-04 01:15:00+00:00	|1.06611 |Put	  |2.14		|False  |1005.16
+...
+
+Datas information
+--------------------------------------
+  Period Start		: 03/04/17 00:00
+  Period End		: 03/04/17 23:58
+  Timestep used		: M5
+  Ups			: 139 | 48.43%
+  Downs			: 137 | 47.74%
+  Equals		: 11 | 3.83%
+
+Results
+--------------------------------------
+  Initial Balance	: 1000.00$
+  Final Balance		: 1117.04$
+  Profit		: 117.04$
+  Relative profit	: 11.70%
+  Nb actions taken	: 287
+  Max Balance		: 1117.04$
+  Min Balance		: 879.35$
+
+Consecutive actions results
+--------------------------------------
+  MaxConsRight		: 6
+  MaxConsWrong		: 7
+  Details :
+  consecutive right actions
+   	|uni	|cumul
+   	-------------
+    2:	|16	|39
+    3:	|12	|23
+    4:	|8	|11
+    5:	|2	|3
+    6:	|1	|1
+  consecutive wrong actions
+   	|uni	|cumul
+   	-------------
+    2:	|14	|34
+    3:	|10	|20
+    4:	|3	|10
+    5:	|2	|7
+    6:	|4	|5
+    7:	|1	|1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Below you’ll find an explanation of the output for every section&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Detailed transactions&lt;/strong&gt;: Detailed transactions during the whole period. Pretty useful for debugging a strategy, highliting the main errors the model did during simulation.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Datas Information&lt;/strong&gt;: This gave me a quick idea about the data that has been used as well as some simple simple statistics to give me hints regarding the following results such as the distribution of each label.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Results&lt;/strong&gt;: The results regarding profits. Although final profit is important, min and max balance also are. If you get to have a minimum balance, of course, that means something went wrong, you spent money that you didn’t have. And on the other side if you had during the back testing period a way higher number than the final amount you get, that means you did some critical mistakes at some point that you may have avoided. It also gives the number of taken actions, that gives indication about how confident the model is to take a prediction, whatever the prediction is.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Consecutive action results&lt;/strong&gt;: This little additional summary was mostly used for debugging my MartinGale strategy as too many consecutive mistakes can lean to bankrupt quite fast. It gives an idea about the streaks the model had, regardless whether it’s a winning streak or a losing streak, although losing streaks matter more …&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;examples&quot;&gt;EXAMPLES&lt;/h2&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Consecutive actions results
+--------------------------------------
+  MaxConsRight		: 10
+  MaxConsWrong		: 12
+  Details :
+  consecutive right actions
+   	|uni	|cumul
+   	-------------
+    2:	|858	|1656
+    3:	|403	|798
+    4:	|215	|395
+    5:	|95	|180
+    6:	|41	|85
+    7:	|18	|44
+    8:	|15	|26
+    9:	|9	|11
+    10:	|2	|2
+  consecutive wrong actions
+   	|uni	|cumul
+   	-------------
+    2:	|808	|1591
+    3:	|390	|783
+    4:	|211	|393
+    5:	|93	|182
+    6:	|43	|89
+    7:	|29	|46
+    8:	|5	|17
+    9:	|6	|12
+    10:	|3	|6
+    11:	|1	|3
+    12:	|2	|2
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Otniel-Bogdan Mercea</name><email>otimercea@gmail.com</email></author><summary type="html">Small project I realized when I was learning python and thought I could hack trading easily. I implemented really simplistic methods with a simple simulator in order to back test my strategy, which worked effectively. (back testing, not the strategy itself)</summary></entry></feed>

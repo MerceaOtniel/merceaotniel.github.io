@@ -1,0 +1,668 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.11.2 by Michael Rose
+  Copyright 2013-2018 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE.txt
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Simple binary options trading | Otniel-Bogdan Mercea</title>
+<meta name="description" content="Small project I realized when I was learning python and thought I could hack trading easily. I implemented really simplistic methods with a simple simulator in order to back test my strategy, which worked effectively. (back testing, not the strategy itself)">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Otniel-Bogdan Mercea">
+<meta property="og:title" content="Simple binary options trading">
+<meta property="og:url" content="http://localhost:4000/BOTAI/">
+
+
+  <meta property="og:description" content="Small project I realized when I was learning python and thought I could hack trading easily. I implemented really simplistic methods with a simple simulator in order to back test my strategy, which worked effectively. (back testing, not the strategy itself)">
+
+
+
+  <meta property="og:image" content="http://localhost:4000/images/paris.jpg">
+
+
+
+
+
+  <meta property="article:published_time" content="2017-02-17T03:16:01+01:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/BOTAI/">
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "Otniel-Bogdan Mercea",
+      "url": "http://localhost:4000",
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Otniel-Bogdan Mercea Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if lte IE 9]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+<link rel="apple-touch-icon" sizes="57x57" href="/assets/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/assets/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/assets/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/assets/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/assets/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/assets/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/assets/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/assets/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/assets/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+<link rel="manifest" href="/assets/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/assets/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">Otniel-Bogdan Mercea</a>
+        <ul class="visible-links">
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://localhost:4000/cv/" >CV</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://localhost:4000/projects/" >Projects</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="https://otnielmercea.github.io" >About</a>
+            </li>
+          
+        </ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    <div class="initial-content">
+      
+  
+
+
+
+
+
+
+
+
+
+
+
+<div class="page__hero--overlay"
+  style=" background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/paris.jpg');"
+>
+  
+    <div class="wrapper">
+      <h1 id="page-title" class="page__title" itemprop="headline">
+        
+          Simple binary options trading
+
+        
+      </h1>
+      
+        <p class="page__lead">Small project I realized when I was learning python and thought I could hack trading easily. I implemented really simplistic methods with a simple simulator in order to back test my strategy, which worked effectively. (back testing, not the strategy itself)
+
+</p>
+      
+      
+      
+    </div>
+  
+  
+</div>
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="http://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+
+      
+        <img src="/images/profile_picture.jpg" alt="Otniel-Bogdan Mercea" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Otniel-Bogdan Mercea</h3>
+    
+    
+      <p class="author__bio" itemprop="description">
+        PhD student with the goal of making ML systems that can explain their decisions and that can learn in a data-efficient way
+      </p>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="http://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">Tübingen - Germany</span>
+        </li>
+      
+
+      
+
+      
+        <li>
+          <a href="mailto:otimercea@gmail.com">
+            <meta itemprop="email" content="otimercea@gmail.com" />
+            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email
+          </a>
+        </li>
+      
+
+      
+
+      
+        <li>
+          <a href="https://twitter.com/MerceaOtniel" itemprop="sameAs">
+            <i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://www.linkedin.com/in/otniel-bogdan-mercea-76b742125" itemprop="sameAs">
+            <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://github.com/MerceaOtniel" itemprop="sameAs">
+            <i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Simple binary options trading">
+    <meta itemprop="description" content="Small project I realized when I was learning python and thought I could hack trading easily. I implemented really simplistic methods with a simple simulator in order to back test my strategy, which worked effectively. (back testing, not the strategy itself)">
+    <meta itemprop="datePublished" content="February 17, 2017">
+    
+
+    <div class="page__inner-wrap">
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>Small project I realized when I was learning python and thought I could hack trading easily. I implemented really simplistic methods with a simple simulator in order to back test my strategy, which worked effectively. (back testing, not the strategy itself)</p>
+
+<!--more-->
+
+<p>Github repo: <a href="github.com/RafaelCartenet/BOTAI/">here</a></p>
+
+<p>When I was learning python I gave myself some little challenges in order to get familiar with the language. One of them was competing in a lot of programming little contests, to get the basic syntax and reflexes of the language, the other one being tackling “real life” use cases with what I learned.</p>
+
+<p>I am retro engineering this little project as I didn’t take the time to make a complete explanation at that time. The key at that time was to get familiar with OOP with Python, that is creating a little project around a set of classes and implement methods.</p>
+
+<p>Backtesting output example:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---------------------------------------------------------------------------------------
+|#	|Date				                |StackP  |action|amount	|result	|balance
+---------------------------------------------------------------------------------------
+|1	|2017-03-04 00:00:00+00:00	|1.06593 |Call	|1.00		|True	  |1000.00
+|2	|2017-03-04 00:05:00+00:00	|1.06628 |Call	|1.00		|False	|1000.88
+|3	|2017-03-04 00:10:00+00:00	|1.06613 |Put	  |2.14		|False	|999.88
+|4	|2017-03-04 00:15:00+00:00	|1.06622 |Call	|4.56		|False	|997.74
+|5	|2017-03-04 00:20:00+00:00	|1.06619 |Put	  |9.75		|True	  |993.18
+|6	|2017-03-04 00:25:00+00:00	|1.06615 |Call	|1.00		|False	|1001.76
+|7	|2017-03-04 00:30:00+00:00	|1.06603 |Put	  |2.14		|True	  |1000.76
+|8	|2017-03-04 00:35:00+00:00	|1.06602 |Call	|1.00		|True	  |1002.64
+|9	|2017-03-04 00:40:00+00:00	|1.06619 |Call	|1.00		|False	|1003.52
+|10	|2017-03-04 00:45:00+00:00	|1.06613 |Put	  |2.14		|False	|1002.52
+|11	|2017-03-04 00:50:00+00:00	|1.06645 |Call	|4.56		|False	|1000.38
+|12	|2017-03-04 00:55:00+00:00	|1.06625 |Put	  |9.75		|True	  |995.82
+|13	|2017-03-04 01:00:00+00:00	|1.06605 |Call	|1.00		|True	  |1004.40
+|14	|2017-03-04 01:05:00+00:00	|1.06632 |Call	|1.00		|True	  |1005.28
+|15	|2017-03-04 01:10:00+00:00	|1.06634 |Call	|1.00		|False	|1006.16
+|16	|2017-03-04 01:15:00+00:00	|1.06611 |Put	  |2.14		|False  |1005.16
+...
+
+Datas information
+--------------------------------------
+  Period Start		: 03/04/17 00:00
+  Period End		: 03/04/17 23:58
+  Timestep used		: M5
+  Ups			: 139 | 48.43%
+  Downs			: 137 | 47.74%
+  Equals		: 11 | 3.83%
+
+Results
+--------------------------------------
+  Initial Balance	: 1000.00$
+  Final Balance		: 1117.04$
+  Profit		: 117.04$
+  Relative profit	: 11.70%
+  Nb actions taken	: 287
+  Max Balance		: 1117.04$
+  Min Balance		: 879.35$
+
+Consecutive actions results
+--------------------------------------
+  MaxConsRight		: 6
+  MaxConsWrong		: 7
+  Details :
+  consecutive right actions
+   	|uni	|cumul
+   	-------------
+    2:	|16	|39
+    3:	|12	|23
+    4:	|8	|11
+    5:	|2	|3
+    6:	|1	|1
+  consecutive wrong actions
+   	|uni	|cumul
+   	-------------
+    2:	|14	|34
+    3:	|10	|20
+    4:	|3	|10
+    5:	|2	|7
+    6:	|4	|5
+    7:	|1	|1
+</code></pre></div></div>
+
+<p>Below you’ll find an explanation of the output for every section</p>
+<ul>
+  <li><strong>Detailed transactions</strong>: Detailed transactions during the whole period. Pretty useful for debugging a strategy, highliting the main errors the model did during simulation.</li>
+  <li><strong>Datas Information</strong>: This gave me a quick idea about the data that has been used as well as some simple simple statistics to give me hints regarding the following results such as the distribution of each label.</li>
+  <li><strong>Results</strong>: The results regarding profits. Although final profit is important, min and max balance also are. If you get to have a minimum balance, of course, that means something went wrong, you spent money that you didn’t have. And on the other side if you had during the back testing period a way higher number than the final amount you get, that means you did some critical mistakes at some point that you may have avoided. It also gives the number of taken actions, that gives indication about how confident the model is to take a prediction, whatever the prediction is.</li>
+  <li><strong>Consecutive action results</strong>: This little additional summary was mostly used for debugging my MartinGale strategy as too many consecutive mistakes can lean to bankrupt quite fast. It gives an idea about the streaks the model had, regardless whether it’s a winning streak or a losing streak, although losing streaks matter more …</li>
+</ul>
+
+<h2 id="examples">EXAMPLES</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Consecutive actions results
+--------------------------------------
+  MaxConsRight		: 10
+  MaxConsWrong		: 12
+  Details :
+  consecutive right actions
+   	|uni	|cumul
+   	-------------
+    2:	|858	|1656
+    3:	|403	|798
+    4:	|215	|395
+    5:	|95	|180
+    6:	|41	|85
+    7:	|18	|44
+    8:	|15	|26
+    9:	|9	|11
+    10:	|2	|2
+  consecutive wrong actions
+   	|uni	|cumul
+   	-------------
+    2:	|808	|1591
+    3:	|390	|783
+    4:	|211	|393
+    5:	|93	|182
+    6:	|43	|89
+    7:	|29	|46
+    8:	|5	|17
+    9:	|6	|12
+    10:	|3	|6
+    11:	|1	|3
+    12:	|2	|2
+</code></pre></div></div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2017-02-17T03:16:01+01:00">February 17, 2017</time></p>
+        
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Simple+binary+options+trading%20http%3A%2F%2Flocalhost%3A4000%2FBOTAI%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2FBOTAI%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://plus.google.com/share?url=http%3A%2F%2Flocalhost%3A4000%2FBOTAI%2F" class="btn btn--google-plus" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Google Plus"><i class="fab fa-fw fa-google-plus" aria-hidden="true"></i><span> Google+</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2FBOTAI%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="#" class="pagination--pager disabled">Previous</a>
+    
+    
+      <a href="/bash-cheatsheet/" class="pagination--pager" title="Bash
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You May Also Enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/learning-chinese/" rel="permalink">Learning chinese, my experience
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  6 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">My learning chinese journey has been lasting for years now and I would like to share my adventure (with a tech point of view) as well as give some tips that ...</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/alphastar/" rel="permalink">AlphaStar, DeepMind’s new success story
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  8 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">They did it! DeepMind, the successful inventors of AlphaGo, the Go game AI that defeated the professional korean player Lee Sedol, just released a new amazin...</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/pyspark-cheatsheet/" rel="permalink">Spark
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">WORK IN PROGRESS
+
+</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/mcqbot/" rel="permalink">MCQBot
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  less than 1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">MCQBot, or Multiple Choice Questions Bot is a simple NLP project I realized in June 2018. The idea is pretty simple, given a question and a set of answers, m...</p>
+  </article>
+</div>
+        
+      </div>
+    </div>
+  
+  
+</div>
+    </div>
+
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+    
+    
+    
+      <li><a href="https://github.com/MerceaOtniel"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+    
+    
+    
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2021 Otniel-Bogdan Mercea. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>
