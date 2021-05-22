@@ -4,7 +4,6 @@ permalink: /projects/
 author_profile: true
 
 ---
-# Projects
 
 - [**Safestreet**](https://merceaotniel.github.io/safestreet/)
 
