@@ -11,7 +11,7 @@ author_profile: true
 
 -  **[Eastern European Machine Learning Summer School](https://merceaotniel.github.io/eeml/)**
 
--  **[HybridAlpha](https://merceaotniel.github.io/safestreet/hybridprize/)**
+-  **[HybridAlpha](https://merceaotniel.github.io/hybridprize/)**
 
 -  **[UniHack - Best Smart Mobility Project ](https://merceaotniel.github.io/unihackprize/)**
 
