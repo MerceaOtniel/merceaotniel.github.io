@@ -1,11 +1,13 @@
 # main links
 main:
-  - title: "CV"
-    url: /cv/
-  - title: "Projects"
-    url: /projects/ 
   - title: "About"
     url: https://merceaotniel.github.io
+  - title: "Projects"
+    url: /projects/ 
+  - title: "Prizes"
+    url: /prizes/
+  - title: "CV"
+    url: /cv/
   # - title: "Sample Collections"
   #   url: /collection-archive/
   # - title: "Sitemap"

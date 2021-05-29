@@ -5,6 +5,8 @@ author_profile: true
 
 ---
 
+**Selected Projects**
+
 - [**Safestreet**](https://merceaotniel.github.io/safestreet/)
 
 - [**SPark - Community-Driven Smart Parking**](https://merceaotniel.github.io/spark/)
@@ -19,6 +21,6 @@ author_profile: true
 
 - [**Fixed Execution Non-Preemptive (FENP) algorithm**](https://merceaotniel.github.io/fixedexecution/)
 
-
+- [**Research and Development-energy consumption**](https://merceaotniel.github.io/randd/)
 
 
