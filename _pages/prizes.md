@@ -5,7 +5,7 @@ author_profile: true
 
 ---
 
-## Selected Awards
+**Selected Awards**
 
 -  **[EEML 2019 - Electricity prediction - First Prize](https://merceaotniel.github.io/eeml2019kaggle/)**
 
@@ -38,11 +38,11 @@ author_profile: true
 -  **[Informatics Olympiad-Mention ](https://merceaotniel.github.io/informaticsolympiadmention/)**
 
 
-## Selected Scholarships
+**Selected Scholarships**
 
 - **[IMPRS-IS Scholarship ](https://merceaotniel.github.io/imprsisscholarship/)**
 
 - **[Special Scolarship ](https://merceaotniel.github.io/specialscholarship/)**
 
-- **[Scholarships ](https://merceaotniel.github.io/scholarships/)**
+- **[Performance Scholarships](https://merceaotniel.github.io/scholarships/)**
 

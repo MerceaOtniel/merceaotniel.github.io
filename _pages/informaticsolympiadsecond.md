@@ -5,7 +5,7 @@ author_profile: true
 
 ---
 
-Informatics Olympiad, county phase, in 2015
+Awarded in the Informatics Olympiad, county phase, in 2015
 
 
 
