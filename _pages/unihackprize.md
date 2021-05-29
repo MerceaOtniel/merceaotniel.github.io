@@ -5,7 +5,7 @@ author_profile: true
 
 ---
 
-Best Smart Mobility Project awarded at UniHack for the project entitled "Wave" in May 2019.
+Awarded at UniHack for the project entitled "Wave" in May 2019.
 
 
 

@@ -1,6 +1,6 @@
 ---
 layout: single
-permalink: /hyrbidprize/
+permalink: /hybridprize/
 author_profile: true
 
 ---
