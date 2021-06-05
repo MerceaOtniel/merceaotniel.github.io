@@ -7,7 +7,7 @@ author_profile: true
 
 **Selected Projects**
 
-- [**Safestreet**](https://merceaotniel.github.io/safestreet/)
+- [**SafeStreet**](https://merceaotniel.github.io/safestreet/)
 
 - [**SPark - Community-Driven Smart Parking**](https://merceaotniel.github.io/spark/)
 
