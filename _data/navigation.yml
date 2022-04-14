@@ -8,6 +8,12 @@ main:
     url: /prizes/
   - title: "CV"
     url: /cv/
+  - title: "Publications"
+    url: /publications/
+  - title: "Community service"
+    url: /community_service/
+  - title: "Talks"
+    url: /talks/
   # - title: "Sample Collections"
   #   url: /collection-archive/
   # - title: "Sitemap"

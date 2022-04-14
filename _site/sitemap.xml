@@ -13,6 +13,9 @@
 <loc>http://localhost:4000/caiusiacobmathematics/</loc>
 </url>
 <url>
+<loc>http://localhost:4000/community_service/</loc>
+</url>
+<url>
 <loc>http://localhost:4000/ctfusvprize/</loc>
 </url>
 <url>
@@ -73,6 +76,9 @@
 <loc>http://localhost:4000/projects/</loc>
 </url>
 <url>
+<loc>http://localhost:4000/publications/</loc>
+</url>
+<url>
 <loc>http://localhost:4000/randd/</loc>
 </url>
 <url>
@@ -88,6 +94,9 @@
 <loc>http://localhost:4000/specialscholarship/</loc>
 </url>
 <url>
+<loc>http://localhost:4000/talks/</loc>
+</url>
+<url>
 <loc>http://localhost:4000/unihack/</loc>
 </url>
 <url>
@@ -101,6 +110,6 @@
 </url>
 <url>
 <loc>http://localhost:4000/download/cv.pdf</loc>
-<lastmod>2021-04-28T18:48:20+02:00</lastmod>
+<lastmod>2022-04-13T20:49:28+02:00</lastmod>
 </url>
 </urlset>
