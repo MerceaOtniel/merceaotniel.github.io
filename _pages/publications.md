@@ -1,12 +1,9 @@
 ---
-title: 'Publications'
 layout: single
 permalink: /publications/
 author_profile: true
 
 ---
-
-## Papers
 
 - **ECCV 2022**: ["Temporal and cross-modal attention for audio-visual zero-shot learning"](https://arxiv.org/abs/2207.09966). **Otniel-Bogdan Mercea** *, Thomas Hummel *, A. Sophia Koepke, Zeynep Akata.
 
