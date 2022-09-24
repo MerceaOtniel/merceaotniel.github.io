@@ -5,6 +5,10 @@ author_profile: true
 
 ---
 
+**CV**
+
+Find attached the full PDF version of my [CV]({{ site.url }}/download/cv.pdf)
+
 **Education**
 - PhD at International Max Planck Research School for Intelligent Systems between 2021 - 2024 (expected).
 - MSc in AI at University of Edinburgh. Grade 76% (Distinction). Attended between 2019-2020.
@@ -17,7 +21,4 @@ author_profile: true
 - Junior Software Engineer at **[3Pillar Global](https://www.3pillarglobal.com/)** between Jun. 2017 - Sep. 2017. 
 - Undergraduate Research Assistant at ”DSPLabs” research group at Politehnica University of Timisoara between Feb. 2017 - Jun. 2018.
 
-**CV**
-
-Find attached the full PDF version of my [CV]({{ site.url }}/download/cv.pdf)   
 
