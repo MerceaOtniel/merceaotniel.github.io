@@ -4,7 +4,9 @@ author_profile: true
 
 ---
 I am currently a PhD student at Max Planck Institute for Intelligent Systems and the University of Tübingen, being part of the **[IMPRS-IS doctoral program](https://imprs.is.mpg.de/)** since May 2021, where I am working under the supervision of **[Prof. Zeynep Akata](https://eml-unitue.de/people/zeynep-akata)** and **[Prof. Andreas Geiger](http://www.cvlibs.net/)**.
-My research interests are at the intersection of explainability and interpretability, efficient learning and computer vision in the context of autonomous agents.
+I am primary interested in multi-modal learning, zero/few-shot learning, foundation models and explainability and interpretability.
+
+
 
 Prior, I did an MSc in AI at the University of Edinburgh. The title of my MSc thesis was "What neural networks can not learn?" and it was done under the supervision of **[Prof. Amos Storkey](https://www.bayeswatch.com/)**. The goal of the thesis was to find very easy tasks, in a non-distributional shift scenario, on which current CNNs fail badly.
 
