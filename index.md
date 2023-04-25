@@ -3,7 +3,7 @@ layout: single
 author_profile: true
 
 ---
-I am currently a PhD student at Max Planck Institute for Intelligent Systems and the University of Tübingen, being part of the **[IMPRS-IS doctoral program](https://imprs.is.mpg.de/)** since May 2021, where I am working under the supervision of **[Prof. Zeynep Akata](https://eml-unitue.de/people/zeynep-akata)** and **[Prof. Andreas Geiger](http://www.cvlibs.net/)**.
+I am currently a PhD student in the **[International Max Planck Research School for Intelligent systems (IMPRS-IS) doctoral program](https://imprs.is.mpg.de/)** since May 2021, where I am working under the supervision of **[Prof. Zeynep Akata](https://eml-unitue.de/people/zeynep-akata)** and **[Prof. Andreas Geiger](http://www.cvlibs.net/)**.
 I am primary interested in multi-modal learning, zero/few-shot learning, foundation models and explainability and interpretability.
 
 
