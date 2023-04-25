@@ -12,7 +12,7 @@ Find attached the full PDF version of my [CV]({{ site.url }}/download/cv.pdf)
 **Education**
 - PhD in the doctoral program "International Max Planck Research School for Intelligent Systems (IMPRS-IS)" between 2021 - 2024 (expected).
 - MSc in AI at University of Edinburgh. Grade 76% (Distinction). Attended between 2019-2020.
-- BSc in Computers and Information Technology at Politehnica University of Timisoara. Grade 9.70 (Top 3%). Attended between 2015-2019.
+- BEng in Computers and Information Technology at Politehnica University of Timisoara. Grade 9.70 (Top 3%). Attended between 2015-2019.
 
 **Work Experience**
 
