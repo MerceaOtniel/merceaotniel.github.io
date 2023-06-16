@@ -6,7 +6,7 @@ author_profile: true
 ---
 **Selected awards**
 
--**Awards for Competitive programming contests**
+**Awards for Competitive programming contests**
 
 -  **[Informatics Olympiad - Second Place ](https://merceaotniel.github.io/informaticsolympiadsecond/)**
 -  **[Caius Iacob Informatics Contest-Second Place ](https://merceaotniel.github.io/caiusiacobinformaticssecond/)**
@@ -14,14 +14,14 @@ author_profile: true
 -  **[Caius Iacob Informatics Contest-Mention ](https://merceaotniel.github.io/caiusiacobinformaticsmentionprize/)**
 
 
--**Awards for Mathematics contests**
+**Awards for Mathematics contests**
 
 -  **[Caius Iacob Mathematics Contest - Second Place ](https://merceaotniel.github.io/caiusiacobmathematics/)**
 -  **[Mathematics-Science and universal language - Third place ](https://merceaotniel.github.io/mathematicsscienceprize/)**
 
 
 
--**Awards for machine learning applications**
+**Awards for machine learning applications**
 
 -  **[EEML 2019 - Electricity prediction - First Prize](https://merceaotniel.github.io/eeml2019kaggle/)**
 -  **[Eastern European Machine Learning Summer School](https://merceaotniel.github.io/eeml/)**
@@ -30,18 +30,18 @@ author_profile: true
 -  **[HackTM Sibiu edition - Grand Prize ](https://merceaotniel.github.io/hacktmprize/)**
 
 
--**Computer security contests**
+**Computer security contests**
 
 -  **[CTF-USV](https://merceaotniel.github.io/ctfusvprize/)**
 
 
--**Honor diplomas**
+**Honor diplomas**
 
 -  **[Honour Student](https://merceaotniel.github.io/honorstudentprize/)**
 -  **[Honors Diploma](https://merceaotniel.github.io/honordiplomaprize/)**
 
 
--**Awards for general software applications**
+**Awards for general software applications**
 
 -  **[JAVA COMPETITION FOR UNIVERSITIES - Second Place](https://merceaotniel.github.io/javacompetitionprize/)**
  

@@ -7,7 +7,7 @@ author_profile: true
 
 **Selected Projects**
 
--**Machine learning projects**
+**Machine learning projects**
 
 - [**SafeStreet**](https://merceaotniel.github.io/safestreet/)
 - [**Wave**](https://merceaotniel.github.io/wave/)
@@ -16,7 +16,7 @@ author_profile: true
 - [**HybridAlpha**](https://merceaotniel.github.io/hybridalpha/)
 
 
--**Other projects**
+**Other projects**
 - [**SPark - Community-Driven Smart Parking**](https://merceaotniel.github.io/spark/)
 - [**Fixed Execution Non-Preemptive (FENP) algorithm**](https://merceaotniel.github.io/fixedexecution/)
 - [**Research and Development-energy consumption**](https://merceaotniel.github.io/randd/)
