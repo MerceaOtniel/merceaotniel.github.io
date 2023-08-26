@@ -6,7 +6,7 @@ author_profile: true
 
 
 
-Since July 2023, I am also a Research Intern at **[Google Research](https://research.google/teams/perception/)**, working with **[Anurag Arnab](https://anuragarnab.github.io/)** and **[Cordelia Schmid](https://www.di.ens.fr/willow/people_webpages/cordelia/)** on efficient adaptation of foundation models.  
+Since July 2023, I am also a Research Intern at **[Google Research](https://research.google/teams/perception/)**, working with **[Anurag Arnab](https://anuragarnab.github.io/)**, **[Alexey Gritsenko](https://scholar.google.nl/citations?user=zTy9cUwAAAAJ&hl=en)**  and **[Cordelia Schmid](https://www.di.ens.fr/willow/people_webpages/cordelia/)** on efficient adaptation of foundation models.  
 
 I am currently a PhD student in the **[International Max Planck Research School for Intelligent systems (IMPRS-IS) doctoral program](https://imprs.is.mpg.de/)** since May 2021, where I am working under the supervision of **[Prof. Zeynep Akata](https://eml-unitue.de/people/zeynep-akata)** and **[Prof. Andreas Geiger](http://www.cvlibs.net/)**.
 I am primary interested in multi-modal learning, zero/few-shot learning, foundation models and explainability and interpretability.
