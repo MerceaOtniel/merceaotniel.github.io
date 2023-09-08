@@ -10,10 +10,13 @@ main:
     url: /cv/
   - title: "Publications"
     url: /publications/
-  - title: "Community service"
+  - title: "Service"
     url: /community_service/
   - title: "Talks"
     url: /talks/
+  - title: "Patents"
+    url: /patents/
+
   # - title: "Sample Collections"
   #   url: /collection-archive/
   # - title: "Sitemap"
