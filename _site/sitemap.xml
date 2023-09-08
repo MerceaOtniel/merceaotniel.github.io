@@ -67,6 +67,9 @@
 <loc>http://localhost:4000/mathematicsscienceprize/</loc>
 </url>
 <url>
+<loc>http://localhost:4000/patents/</loc>
+</url>
+<url>
 <loc>http://localhost:4000/predictingmusic/</loc>
 </url>
 <url>
@@ -110,6 +113,6 @@
 </url>
 <url>
 <loc>http://localhost:4000/download/cv.pdf</loc>
-<lastmod>2023-08-04T22:29:25+02:00</lastmod>
+<lastmod>2023-09-08T08:46:23+02:00</lastmod>
 </url>
 </urlset>
