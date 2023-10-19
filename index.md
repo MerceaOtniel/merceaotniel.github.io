@@ -11,7 +11,7 @@ Since July 2023, I am also a Research Intern at **[Google Research](https://rese
 I am currently a PhD student in the **[International Max Planck Research School for Intelligent systems (IMPRS-IS) doctoral program](https://imprs.is.mpg.de/)** since May 2021, where I am working under the supervision of **[Prof. Zeynep Akata](https://eml-unitue.de/people/zeynep-akata)** and **[Prof. Andreas Geiger](http://www.cvlibs.net/)**.
 I am primary interested in multi-modal learning, zero/few-shot learning, foundation models and explainability and interpretability.
 
-Prior, I was a Machine Learning Engineer at **[Everseen](https://everseen.com/)**, where I worked in the area of real-time multi-camera tracking.
+Prior, I was a Machine Learning Researcher at **[Everseen](https://everseen.com/)**, where I worked in the area of real-time multi-camera tracking.
 
 Before that, I did an MSc in AI at the **[University of Edinburgh](https://www.ed.ac.uk/)**. The title of my MSc thesis was "What neural networks can not learn?" and it was done under the supervision of **[Prof. Amos Storkey](https://www.bayeswatch.com/)**. The goal of the thesis was to find very easy tasks, in a non-distributional shift scenario, on which current CNNs fail badly.
 
