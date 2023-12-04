@@ -16,6 +16,7 @@ Find attached the full PDF version of my [CV]({{ site.url }}/download/cv.pdf)
 
 **Work Experience**
 
+- Student Researcher at **[Google Research](https://research.google/teams/perception/)** since Dec. 2023.
 - Research Intern at **[Google Research](https://research.google/teams/perception/)** between Jul. 2023 - Nov. 2023.
 - Middle Machine Learning Researcher at **[Everseen](https://everseen.com/)** between Nov. 2020 - Apr. 2021.
 - Junior Software Engineer at **[Presslabs](https://www.presslabs.com/)** between Jul. 2018 - Sep. 2018. 
