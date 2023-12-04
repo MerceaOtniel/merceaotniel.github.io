@@ -10,7 +10,7 @@ I am primary interested in multi-modal learning, zero/few-shot learning, large-s
 I am also currently a Student Researcher at **[Google Research](https://research.google/teams/perception/)**, continuing to work with **[Anurag Arnab](https://anuragarnab.github.io/)**, **[Alexey Gritsenko](https://scholar.google.nl/citations?user=zTy9cUwAAAAJ&hl=en)**  and **[Cordelia Schmid](https://www.di.ens.fr/willow/people_webpages/cordelia/)** on efficient adaptation of large-scale models. 
 
 
-During July-November 2023, I was a Research Intern at **[Google Research](https://research.google/teams/perception/)**, working with **[Anurag Arnab](https://anuragarnab.github.io/)**, **[Alexey Gritsenko](https://scholar.google.nl/citations?user=zTy9cUwAAAAJ&hl=en)**  and **[Cordelia Schmid](https://www.di.ens.fr/willow/people_webpages/cordelia/)** on efficient adaptation of large-scale models.  
+During Autumn 2023, I was a Research Intern at **[Google Research](https://research.google/teams/perception/)**, working with **[Anurag Arnab](https://anuragarnab.github.io/)**, **[Alexey Gritsenko](https://scholar.google.nl/citations?user=zTy9cUwAAAAJ&hl=en)**  and **[Cordelia Schmid](https://www.di.ens.fr/willow/people_webpages/cordelia/)** on efficient adaptation of large-scale models.  
 
 Prior to my PhD I was a Machine Learning Researcher at **[Everseen](https://everseen.com/)**, where I worked in the area of real-time multi-camera tracking and I contributed to the development of multiple patents.
 
