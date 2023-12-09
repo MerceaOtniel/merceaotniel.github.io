@@ -16,6 +16,8 @@ main:
     url: /talks/
   - title: "Patents"
     url: /patents/
+  - title: "Supervision"
+    url: /supervision/
 
   # - title: "Sample Collections"
   #   url: /collection-archive/
