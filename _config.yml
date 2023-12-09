@@ -104,7 +104,7 @@ author:
   name             : "Otniel-Bogdan Mercea"
   avatar           : "/images/profile_picture.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "PhD student with the goal of creating ML systems that can explain their decisions and that can learn in a data-efficient way"
-  location         : "Tübingen - Germany"
+  location         : "Munich - Germany"
   email            : "otimercea@gmail.com"
   uri              :
   home             : # null (default), "absolute or relative url to link to author home"
