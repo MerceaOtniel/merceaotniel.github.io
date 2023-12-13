@@ -9,6 +9,5 @@ author_profile: true
 - TPAMI 2023
 - NeurIPS 2023
 - ICCV 2023
-- CVPR 2023
+- CVPR 2022-2024
 - ECCV 2022
-- CVPRw 2022 (L3D-IVU)
