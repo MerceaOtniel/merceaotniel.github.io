@@ -11,6 +11,7 @@ I am primary interested in multi-modal learning, zero/few-shot learning, efficie
 I am also a Student Researcher at **[Google Research](https://research.google/teams/perception/)**, continuing to work with **[Anurag Arnab](https://anuragarnab.github.io/)**, **[Alexey Gritsenko](https://scholar.google.nl/citations?user=zTy9cUwAAAAJ&hl=en)**  and **[Cordelia Schmid](https://www.di.ens.fr/willow/people_webpages/cordelia/)** on efficient adaptation of large-scale models. 
 
 **Previously**
+
 I was a Research Intern at **[Google Research](https://research.google/teams/perception/)**, working with **[Anurag Arnab](https://anuragarnab.github.io/)**, **[Alexey Gritsenko](https://scholar.google.nl/citations?user=zTy9cUwAAAAJ&hl=en)**  and **[Cordelia Schmid](https://www.di.ens.fr/willow/people_webpages/cordelia/)** on efficient adaptation of large-scale models.  
 Prior to my PhD I was a Machine Learning Researcher at **[Everseen](https://everseen.com/)**, where I worked in the area of real-time multi-camera tracking and I contributed to the development of multiple patents.
 I did an MSc in AI with Distinction at the **[University of Edinburgh](https://www.ed.ac.uk/)**. The title of my MSc thesis was "What neural networks can not learn?" and it was done under the supervision of **[Prof. Amos Storkey](https://www.bayeswatch.com/)**. The goal of the thesis was to find very easy tasks, in a non-distributional shift scenario, on which current CNNs fail badly.
