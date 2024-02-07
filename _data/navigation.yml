@@ -1,9 +1,7 @@
 # main links
 main:
   - title: "About"
-    url: https://merceaotniel.github.io
-  - title: "Projects"
-    url: /projects/ 
+    url: https://merceaotniel.github.io 
   - title: "Prizes"
     url: /prizes/
   - title: "CV"
@@ -18,6 +16,8 @@ main:
     url: /patents/
   - title: "Supervision"
     url: /supervision/
+  - title: "Projects"
+    url: /projects/
 
   # - title: "Sample Collections"
   #   url: /collection-archive/
