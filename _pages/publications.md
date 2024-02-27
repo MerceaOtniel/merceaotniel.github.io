@@ -4,7 +4,7 @@ permalink: /publications/
 author_profile: true
 
 ---
-- **CVPR 2024**: [Time-, Memory- and Parameter-Efficient Visual Adaptation](https://arxiv.org/abs/2402.02887). **Otniel-Bogdan Mercea**, Alexey Gritsenko, Cordelia Schmid, Anurag Arnab
+- **CVPR 2024**: [Time-, Memory- and Parameter-Efficient Visual Adaptation](https://arxiv.org/abs/2402.02887). **Otniel-Bogdan Mercea**, Alexey Gritsenko, Cordelia Schmid, Anurag Arnab (Seattle, USA)
 
 - **BMVC 2023 (ORAL)**: ["Video-adverb retrieval with compositional adverb-action embeddings"](https://arxiv.org/abs/2309.15086).  Thomas Hummel, **Otniel-Bogdan Mercea**, A. Sophia Koepke, Zeynep Akata. (Aberdeen, UK)
 
