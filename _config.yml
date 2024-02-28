@@ -103,7 +103,7 @@ analytics:
 author:
   name             : "Otniel-Bogdan Mercea"
   avatar           : "/images/profile_picture.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Interested in Multi-modal efficient learning. Ph.D. @ IMPRS-IS. Previously Intern @ Google Research, ML Researcher @ Everseen, MSc @ Edinburgh University."
+  bio              : "Interested in Multi-modal efficient learning. Ph.D. at IMPRS-IS. Previously Intern at Google Research, ML Researcher at Everseen, MSc at Edinburgh University."
   location         : "Munich - Germany"
   email            : "otimercea@gmail.com"
   uri              :
