@@ -49,7 +49,7 @@ author_profile: true
 
 
 **Selected Scholarships**
-
+- **[Google RS Conference Scholarship](https://merceaotniel.github.io/googlescholarship/)**
 - **[IMPRS-IS Scholarship ](https://merceaotniel.github.io/imprsisscholarship/)**
 - **[Special Scolarship ](https://merceaotniel.github.io/specialscholarship/)**
 - **[Performance Scholarships](https://merceaotniel.github.io/scholarships/)**
