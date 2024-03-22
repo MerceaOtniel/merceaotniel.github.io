@@ -7,7 +7,7 @@ author_profile: true
 
 **Long CV**
 
-Find attached the full PDF version of my [CV]({{ site.url }}/download/cv.pdf)
+Find attached the full PDF version of my [CV]({{ site.url }}/download/cv_long.pdf)
 
 **Short 2-page CV**
 
@@ -22,7 +22,7 @@ Find attached the 2 page PDF version of my [CV]({{ site.url }}/download/cv_short
 
 **Work Experience**
 - Guest PhD Student at **[Helmholtz Munich](https://www.helmholtz-munich.de/en)** between Jan. 2024
-- Student Researcher at **[Google Research](https://research.google/teams/perception/)** between Dec. 2023. - March 2024.
+- Student Researcher at **[Google Research](https://research.google/teams/perception/)** between Dec. 2023. - Mar. 2024.
 - Research Intern at **[Google Research](https://research.google/teams/perception/)** between Jul. 2023 - Nov. 2023.
 - Machine Learning Researcher at **[Everseen](https://everseen.com/)** between Nov. 2020 - Apr. 2021.
 - Junior Software Engineer at **[Presslabs](https://www.presslabs.com/)** between Jul. 2018 - Sep. 2018. 
