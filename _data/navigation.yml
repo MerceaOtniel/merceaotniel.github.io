@@ -16,6 +16,8 @@ main:
     url: /patents/
   - title: "Supervision"
     url: /supervision/
+  - title: "Teaching"
+    url: /teaching/
   - title: "Projects"
     url: /projects/
 
