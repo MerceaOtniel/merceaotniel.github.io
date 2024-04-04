@@ -4,7 +4,9 @@ permalink: /publications/
 author_profile: true
 
 ---
-- **CVPR 2024 (Highlight - Top 3.60%)**: [Time-, Memory- and Parameter-Efficient Visual Adaptation](https://arxiv.org/abs/2402.02887). **Otniel-Bogdan Mercea**, Alexey Gritsenko, Cordelia Schmid, Anurag Arnab (Seattle, USA)
+- **CVPRw 2024 (L3D-IVU)**: "Audio-Visual Generalized Zero-Shot Learning using Pre-Trained Large Multi-Modal Models". David Kurzendörfer *, **Otniel-Bogdan Mercea** *, A. Sophia Koepke, Zeynep Akata (Seattle, USA).
+
+- **CVPR 2024 (Highlight - Top 3.60%)**: ["Time-, Memory- and Parameter-Efficient Visual Adaptation""](https://arxiv.org/abs/2402.02887). **Otniel-Bogdan Mercea**, Alexey Gritsenko, Cordelia Schmid, Anurag Arnab (Seattle, USA)
 
 - **BMVC 2023 (ORAL)**: ["Video-adverb retrieval with compositional adverb-action embeddings"](https://arxiv.org/abs/2309.15086).  Thomas Hummel, **Otniel-Bogdan Mercea**, A. Sophia Koepke, Zeynep Akata. (Aberdeen, UK)
 

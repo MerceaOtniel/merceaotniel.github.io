@@ -9,11 +9,10 @@ author_profile: true
 
 Find attached the full PDF version of my [CV]({{ site.url }}/download/cv_long.pdf)
 
-<!---
 **Short 2-page CV**
 
 Find attached the 2 page PDF version of my [CV]({{ site.url }}/download/cv_short.pdf)
--->
+
 
 **Education**
 - PhD in the doctoral program "International Max Planck Research School for Intelligent Systems (IMPRS-IS)" since 2021.
