@@ -5,7 +5,7 @@ author_profile: true
 ---
 **Currently**
 
-- I am a PhD student at the Max Planck Institute for Intelligent Systems and University of Tübingen, being part of the **[International Max Planck Research School for Intelligent systems (IMPRS-IS) doctoral program](https://imprs.is.mpg.de/)** since May 2021. I am working under the supervision of **[Prof. Zeynep Akata](https://scholar.google.com/citations?user=jQl9RtkAAAAJ&hl=en)** and **[Prof. Andreas Geiger](https://scholar.google.ca/citations?user=SrVnrPcAAAAJ&hl=en)**. I am primary interested in multi-modal learning, zero/few-shot learning, efficient adaptation of large-scale models and explainability and interpretability.
+- I am a PhD student at the **[Max Planck Institute for Intelligent Systems](https://is.mpg.de/)** and **[University of Tübingen](https://uni-tuebingen.de/en/)**, being part of the **[IMPRS-IS doctoral program](https://imprs.is.mpg.de/)** since May 2021. I am working under the supervision of **[Prof. Zeynep Akata](https://scholar.google.com/citations?user=jQl9RtkAAAAJ&hl=en)** and **[Prof. Andreas Geiger](https://scholar.google.ca/citations?user=SrVnrPcAAAAJ&hl=en)**. I am primary interested in multi-modal learning, zero/few-shot learning, efficient adaptation of large-scale models and explainability and interpretability.
 - I am also Guest PhD Student at **[Helmholtz Munich](https://www.helmholtz-munich.de/en)** , conducting research under the supervision of Prof. Zeynep Akata, as part of my PhD project at IMPRS-IS.
 
 **Previously**
