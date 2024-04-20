@@ -10,4 +10,4 @@ author_profile: true
 - NeurIPS 2023
 - ICCV 2023
 - CVPR 2022-2024
-- ECCV 2022
+- ECCV 2022-2024
