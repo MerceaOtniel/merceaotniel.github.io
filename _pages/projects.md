@@ -19,6 +19,5 @@ author_profile: true
 **Other projects**
 - [**SPark - Community-Driven Smart Parking**](https://merceaotniel.github.io/spark/)
 - [**Fixed Execution Non-Preemptive (FENP) algorithm**](https://merceaotniel.github.io/fixedexecution/)
-- [**Research and Development-energy consumption**](https://merceaotniel.github.io/randd/)
 
 
