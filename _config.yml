@@ -17,9 +17,9 @@ minimal_mistakes_skin    : "default" #, "air", "aqua", "contrast", "dark", "dirt
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Otniel-Bogdan Mercea"
+title                    : ""
 title_separator          : "|"
-name                     : "Otniel-Bogdan Mercea"
+name                     : ""
 description              : "PhD student Portfolio"
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
