@@ -11,3 +11,4 @@ author_profile: true
 - ICCV 2023
 - CVPR 2022-2024
 - ECCV 2022-2024
+- Best Romanian AI Thesis Awards 2024
