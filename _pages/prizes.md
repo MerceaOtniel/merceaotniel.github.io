@@ -20,11 +20,9 @@ author_profile: true
 -  **[Mathematics-Science and universal language - Third place ](https://merceaotniel.github.io/mathematicsscienceprize/)**
 
 
-
 **Awards for machine learning applications**
 
 -  **[EEML 2019 - Electricity prediction - First Prize](https://merceaotniel.github.io/eeml2019kaggle/)**
--  **[Eastern European Machine Learning Summer School](https://merceaotniel.github.io/eeml/)**
 -  **[HybridAlpha](https://merceaotniel.github.io/hybridprize/)**
 -  **[UniHack - Best Smart Mobility Project ](https://merceaotniel.github.io/unihackprize/)**
 -  **[HackTM Sibiu edition - Grand Prize ](https://merceaotniel.github.io/hacktmprize/)**
@@ -46,7 +44,9 @@ author_profile: true
 -  **[JAVA COMPETITION FOR UNIVERSITIES - Second Place](https://merceaotniel.github.io/javacompetitionprize/)**
  
 
-
+**Competitive Summer Schools**
+-  **[Eastern European Machine Learning Summer School](https://merceaotniel.github.io/eeml/)**
+-  **[Oxford Machine Learning Summer School (OxML)](https://merceaotniel.github.io/oxml/)**
 
 **Selected Scholarships**
 - **[Google RS Conference Scholarship](https://merceaotniel.github.io/googlescholarship/)**
