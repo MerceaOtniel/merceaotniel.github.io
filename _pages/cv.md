@@ -20,6 +20,7 @@ Find attached the 2 page PDF version of my [CV]({{ site.url }}/download/cv_short
 - BEng in Computers and Information Technology at Politehnica University of Timisoara. Grade 9.70 (Top 3%). Attended between 2015-2019.
 
 **Work Experience**
+- Guest PhD Student at **[Technical University of Munich](https://www.tum.de/en/)** since Jun. 2024
 - Guest PhD Student at **[Helmholtz Munich](https://www.helmholtz-munich.de/en)** since Jan. 2024
 - Student Researcher at **[Google Research](https://research.google/teams/perception/)** between Dec. 2023. - Mar. 2024.
 - Research Intern at **[Google Research](https://research.google/teams/perception/)** between Jul. 2023 - Nov. 2023.
