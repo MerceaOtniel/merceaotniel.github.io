@@ -49,6 +49,7 @@ author_profile: true
 -  **[Oxford Machine Learning Summer School (OxML)](https://merceaotniel.github.io/oxml/)**
 
 **Selected Scholarships**
+- **[OxML Scholarshop](https://merceaotniel.github.io/oxmlscholarship/) (declined)**
 - **[Google RS Conference Scholarship](https://merceaotniel.github.io/googlescholarship/)**
 - **[IMPRS-IS Scholarship ](https://merceaotniel.github.io/imprsisscholarship/)**
 - **[Special Scolarship ](https://merceaotniel.github.io/specialscholarship/)**
