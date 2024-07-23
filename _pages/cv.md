@@ -15,13 +15,13 @@ Find attached the 2 page PDF version of my [CV]({{ site.url }}/download/cv_short
 
 
 **Education**
-- PhD in the doctoral program "International Max Planck Research School for Intelligent Systems (IMPRS-IS)" since 2021.
-- MSc in AI at University of Edinburgh. Grade 76% (Distinction). Attended between 2019-2020.
-- BEng in Computers and Information Technology at Politehnica University of Timisoara. Grade 9.70 (Top 3%). Attended between 2015-2019.
+- PhD in the doctoral program "International Max Planck Research School for Intelligent Systems (IMPRS-IS)" Attended between May 2021 - Aug. 2024.
+- MSc in AI at University of Edinburgh. Grade 76% (Distinction). Attended between Sept. 2019 - Aug. 2020.
+- BEng in Computers and Information Technology at Politehnica University of Timisoara. Grade 9.70 (Top 3%). Attended between Oct 2015 - June 2019.
 
 **Work Experience**
 - Guest PhD Student at **[Technical University of Munich](https://www.tum.de/en/)** since Jun. 2024
-- Guest PhD Student at **[Helmholtz Munich](https://www.helmholtz-munich.de/en)** since Jan. 2024
+- Guest PhD Student at **[Helmholtz Munich](https://www.helmholtz-munich.de/en)** between Jan. 2024 - Aug. 2024
 - Student Researcher at **[Google Research](https://research.google/teams/perception/)** between Dec. 2023. - Mar. 2024.
 - Research Intern at **[Google Research](https://research.google/teams/perception/)** between Jul. 2023 - Nov. 2023.
 - Machine Learning Researcher at **[Everseen](https://everseen.com/)** between Nov. 2020 - Apr. 2021.
