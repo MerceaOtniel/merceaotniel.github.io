@@ -28,7 +28,7 @@ author_profile: true
 -  **[HackTM Sibiu edition - Grand Prize ](https://merceaotniel.github.io/hacktmprize/)**
 
 
-**Computer security contests**
+**Awards for computer security contests**
 
 -  **[CTF-USV](https://merceaotniel.github.io/ctfusvprize/)**
 
