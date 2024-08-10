@@ -21,12 +21,12 @@ Find attached the 2 page PDF version of my [CV]({{ site.url }}/download/cv_short
 
 **Work Experience**
 - Guest PhD Student at **[Technical University of Munich](https://www.tum.de/en/)** since Jun. 2024
-- Guest PhD Student at **[Helmholtz Munich](https://www.helmholtz-munich.de/en)** between Jan. 2024 - Aug. 2024
-- Student Researcher at **[Google Research](https://research.google/teams/perception/)** between Dec. 2023. - Mar. 2024.
-- Research Intern at **[Google Research](https://research.google/teams/perception/)** between Jul. 2023 - Nov. 2023.
-- Machine Learning Researcher at **[Everseen](https://everseen.com/)** between Nov. 2020 - Apr. 2021.
-- Junior Software Engineer at **[Presslabs](https://www.presslabs.com/)** between Jul. 2018 - Sep. 2018. 
-- Junior Software Engineer at **[3Pillar Global](https://www.3pillarglobal.com/)** between Jun. 2017 - Sep. 2017. 
+- Guest PhD Student at **[Helmholtz Munich](https://www.helmholtz-munich.de/en)**. Jan. 2024 - Aug. 2024
+- Student Researcher at **[Google Research](https://research.google/teams/perception/)**. Dec. 2023. - Mar. 2024.
+- Research Intern at **[Google Research](https://research.google/teams/perception/)**. Jul. 2023 - Nov. 2023.
+- Machine Learning Researcher at **[Everseen](https://everseen.com/)**. Nov. 2020 - Apr. 2021.
+- Junior Software Engineer at **[Presslabs](https://www.presslabs.com/)**. Jul. 2018 - Sep. 2018. 
+- Junior Software Engineer at **[3Pillar Global](https://www.3pillarglobal.com/)**. Jun. 2017 - Sep. 2017. 
 - Undergraduate Research Assistant at **[DSPLabs](https://www.cs.upt.ro/index.php/research/cccti/dsplabs)** research group at Politehnica University of Timisoara. Feb. 2017 - Jun. 2018.
 
 
