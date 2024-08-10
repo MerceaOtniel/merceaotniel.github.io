@@ -44,12 +44,12 @@ author_profile: true
 -  **[JAVA COMPETITION FOR UNIVERSITIES - Second Place](https://merceaotniel.github.io/javacompetitionprize/)**
  
 
-**Competitive Summer Schools**
+**Highly selective Summer Schools**
 -  **[Eastern European Machine Learning Summer School](https://merceaotniel.github.io/eeml/)**
 -  **[Oxford Machine Learning Summer School (OxML)](https://merceaotniel.github.io/oxml/)**
 
 
-**Competitive Courses**
+**Highly selective Courses**
 - **[Microsoft](https://merceaotniel.github.io/microsoft)**
 - **[Bitdefender](https://merceaotniel.github.io/bitdefender)**
 
