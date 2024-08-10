@@ -15,9 +15,9 @@ Find attached the 2 page PDF version of my [CV]({{ site.url }}/download/cv_short
 
 
 **Education**
-- PhD in the doctoral program "International Max Planck Research School for Intelligent Systems (IMPRS-IS)" Attended between May 2021 - Aug. 2024.
-- MSc in AI at University of Edinburgh. Grade 76% (Distinction). Attended between Sept. 2019 - Aug. 2020.
-- BEng in Computers and Information Technology at Politehnica University of Timisoara. Grade 9.70 (Top 3%). Attended between Oct 2015 - June 2019.
+- PhD in the doctoral program "International Max Planck Research School for Intelligent Systems (IMPRS-IS)". May 2021 - Aug. 2024.
+- MSc in AI at University of Edinburgh. Grade 76% (Distinction). Sept. 2019 - Aug. 2020.
+- BEng in Computers and Information Technology at Politehnica University of Timisoara. Grade 9.70 (Top 3%). Oct 2015 - June 2019.
 
 **Work Experience**
 - Guest PhD Student at **[Technical University of Munich](https://www.tum.de/en/)** since Jun. 2024
@@ -27,6 +27,6 @@ Find attached the 2 page PDF version of my [CV]({{ site.url }}/download/cv_short
 - Machine Learning Researcher at **[Everseen](https://everseen.com/)** between Nov. 2020 - Apr. 2021.
 - Junior Software Engineer at **[Presslabs](https://www.presslabs.com/)** between Jul. 2018 - Sep. 2018. 
 - Junior Software Engineer at **[3Pillar Global](https://www.3pillarglobal.com/)** between Jun. 2017 - Sep. 2017. 
-- Undergraduate Research Assistant at **[DSPLabs](https://www.cs.upt.ro/index.php/research/cccti/dsplabs)** research group at Politehnica University of Timisoara between Feb. 2017 - Jun. 2018.
+- Undergraduate Research Assistant at **[DSPLabs](https://www.cs.upt.ro/index.php/research/cccti/dsplabs)** research group at Politehnica University of Timisoara. Feb. 2017 - Jun. 2018.
 
 
