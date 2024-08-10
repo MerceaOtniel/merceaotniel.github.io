@@ -48,6 +48,13 @@ author_profile: true
 -  **[Eastern European Machine Learning Summer School](https://merceaotniel.github.io/eeml/)**
 -  **[Oxford Machine Learning Summer School (OxML)](https://merceaotniel.github.io/oxml/)**
 
+
+**Competitive Courses**
+- **[Microsoft](https://merceaotniel.github.io/microsoft)**
+- **[Bitdefender](https://merceaotniel.github.io/bitdefender)**
+
+
+
 **Selected Scholarships**
 - **[OxML Scholarship](https://merceaotniel.github.io/oxmlscholarship/) (declined)**
 - **[Google RS Conference Scholarship](https://merceaotniel.github.io/googlescholarship/)**
