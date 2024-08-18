@@ -18,7 +18,7 @@ This thesis has the goal of creating HybridAlpha, an algorithm that combines ide
 **Technologies: Python, TensorFlow, NumPy, Matplotlib**
 
 
-With this project, I was selected to participate to EEML summer school (mainly organised by Google DeepMind) where only 160 out of 738 canditates were selected, ranging from undergraduates to professors. I was among the only 12 undergrads selected. Moreover, this project was selected to be presented as a poster in the "3rd Conference on Recent Advances in Artificial Intelligence" (RAAI 2019) during June 28-30, 2019.
+With this project, I was selected to participate in EEML summer school (mainly organized by Google DeepMind), where only 160 out of 738 candidates, ranging from undergraduates to professors, were selected. I was among the only 12 undergrads selected. Moreover, this project was chosen to be presented as a poster in the "3rd Conference on Recent Advances in Artificial Intelligence" (RAAI 2019) on June 28-30, 2019.
 
 
 

@@ -5,7 +5,7 @@ author_profile: true
 
 ---
 
-**"SafeStreet"** is a project that aims to use video streamed by a drone in order to detect if some violent behaviour is recognised. In this way, autonomous drones could detect unusual behaviour and alert police. We used a recurrent CNN to detect potential violent behaviours in the video streamed by the drone.
+**"SafeStreet"** is a project that aims to use video streamed by a drone to detect if some violent behavior is recognized. In this way, autonomous drones could detect unusual behavior and alert police. We used a recurrent CNN to detect potential violent behaviors in the video streamed by the drone.
 
 **Technologies: Python, Keras, Shell script, OpenCV.**
 

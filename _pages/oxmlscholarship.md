@@ -5,8 +5,7 @@ author_profile: true
 
 ---
 
-Awarded to attend all tracks at Oxford Machine Learning Summer School. I declined it due to unavailability to attend all tracks.
-
+Awarded to attend all tracks at Oxford Machine Learning Summer School. I declined it due to my unavailability to attend all tracks.
 
 
 

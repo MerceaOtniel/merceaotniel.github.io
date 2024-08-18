@@ -5,12 +5,12 @@ author_profile: true
 
 ---
 
-**"SPark - Community-Driven Smart Parking"** is a community-driven mobile application that tries to deal with the lack of available parking places in a big city by using a platform that gives users access to post their own parking spots and the time slots when the parking spot will be free. Then, the other users can reserve that parking spot for a specific time interval, thus creating the opportunity for drivers to manage the parking spots in a very efficient way.
+**"SPark - Community-Driven Smart Parking"** is a community-driven mobile application that tries to deal with the lack of available parking places in a big city by using a platform that gives users access to post their parking spots and the time slots when the parking spot will be free. Then, the other users can reserve that parking spot for a specific time interval, thus allowing drivers to manage the parking spots very efficiently.
 
 **Technologies: Java EE, Rest Api, Android, Oracle Database.**
 
 
-Awards won with this project: **Second place awarded at national competition "JAVA COMPETITION FOR UNIVERSITIES" organized by ADFABER and ORACLE ACADEMY**. 
+Awards won with this project: **Second place awarded at the national competition "JAVA COMPETITION FOR UNIVERSITIES" organized by ADFABER and ORACLE ACADEMY**. 
 
 This project was covered by multiple Newspapers, Publications and Websites:
 
