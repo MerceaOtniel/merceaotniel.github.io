@@ -103,7 +103,7 @@ analytics:
 author:
   name             : "Otniel-Bogdan Mercea"
   avatar           : "/images/profile_picture.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Incoming Research Intern at Google DeepMind | Ph.D. at IMPRS-IS, Helmholtz Munich, TUM | Prev. 2 x Google Research, Edinburgh University, Everseen. | Interested in Multi-modal efficient learning."
+  bio              : "Incoming Research Intern at Google DeepMind | Ph.D. at IMPRS-IS, Helmholtz Munich, TUM | MSc Edinburgh University | Prev. 2 x Google Research | Multi-modal efficient learning."
   location         : "Munich - Germany"
   email            : "otimercea at gmail.com"
   uri              :
