@@ -20,6 +20,7 @@ Find attached the 2 page PDF version of my [CV]({{ site.url }}/download/cv_short
 - BEng in Computers and Information Technology at Politehnica University of Timisoara. Grade 9.70 (Top 3%). Oct 2015 - June 2019.
 
 **Work Experience**
+- Research Intern at **[Google DeepMind](https://deepmind.google/)** since Sep. 2024.
 - Guest PhD Student at **[Technical University of Munich](https://www.tum.de/en/)**. Jun. 2024 - Aug. 2024.
 - Guest PhD Student at **[Helmholtz Munich](https://www.helmholtz-munich.de/en)**. Jan. 2024 - Aug. 2024.
 - Student Researcher at **[Google Research](https://research.google/teams/perception/)**. Dec. 2023 - Mar. 2024.
