@@ -5,7 +5,7 @@ author_profile: true
 
 ---
 
-- **Preprint under review**: [Towards Optimal Adapter Placement for Efficient Transfer Learning"](https://arxiv.org/abs/2410.15858). Aleksandra I. Nowak, **Otniel-Bogdan Mercea**, Anurag Arnab, Jonas Pfeiffer, Yann Dauphin, Utku Evci.
+- **Preprint 2024 (Under review)**: [Towards Optimal Adapter Placement for Efficient Transfer Learning"](https://arxiv.org/abs/2410.15858). Aleksandra I. Nowak, **Otniel-Bogdan Mercea**, Anurag Arnab, Jonas Pfeiffer, Yann Dauphin, Utku Evci.
 
 
 - **CVPRw 2024 (L3D-IVU)**: ["Audio-Visual Generalized Zero-Shot Learning using Pre-Trained Large Multi-Modal Models"](https://arxiv.org/abs/2404.06309). David Kurzendörfer *, **Otniel-Bogdan Mercea** *, A. Sophia Koepke, Zeynep Akata (Seattle, USA).
