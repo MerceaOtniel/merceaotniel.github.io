@@ -1,0 +1,50 @@
+#!/bin/sh
+
+set -e
+set -u
+
+libexec="$(cd "$(dirname "$0")"; pwd)"
+top="${libexec}/.."
+src="${2:-"${top}/src"}"
+version="${1:-$("${libexec}/metadata" node_version)}"
+
+NJOBS="${NJOBS:-$(getconf _NPROCESSORS_ONLN 2>/dev/null || getconf NPROCESSORS_ONLN 2>/dev/null || true)}"
+NJOBS="${NJOBS:-1}"
+
+echo "parallel job count: ${NJOBS}"
+
+BUILDTYPE="${BUILDTYPE:-Release}"
+
+cd "${src}/node-v${version}"
+
+if command -v python3 >/dev/null 2>&1; then
+    PYTHON="${PYTHON:-python3}"
+else
+    PYTHON="${PYTHON:-python2}"
+fi
+
+configure_flags='--openssl-no-asm --without-npm --shared --with-intl=full-icu'
+eval "$("${libexec}/platform")"
+
+echo "configure: ${configure_flags}"
+echo "compilers: CC='${CC}' CXX='${CXX}' CC_host='${CC_host:-}' CXX_host='${CXX_host:-}'"
+
+${CC} -v
+${CXX} -v
+
+# shellcheck disable=SC2086
+"${PYTHON}" configure ${configure_flags}
+
+make BUILDTYPE="${BUILDTYPE}" config.gypi
+make BUILDTYPE="${BUILDTYPE}" "out/Makefile"
+
+# workaround for node specifying `-msign-return-address=all` in ALL `CFLAGS` for aarch64 builds
+# (if the host isn't also aarch64, this flag causes a compiler error)
+
+# shellcheck disable=SC2154 # these variables are defined by `eval`ing the output of the platform script above
+if [ "$host_platform" != "$target_platform" ] && [ "${target_platform%%-*}" = "aarch64"  ]; then
+	find . -iname "*.host.mk" -exec sed -i '/-msign-return-address/d' {} ';'
+fi
+
+export PATH="${PWD}/out/tools/bin:${PATH}"
+make -j"${NJOBS}" -C out BUILDTYPE="${BUILDTYPE}" V=0
