@@ -1,0 +1,19 @@
+current directory: /workspaces/al-folio/vendor/bundle/ruby/3.3.0/gems/debug-1.10.0/ext/debug
+/usr/local/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /workspaces/al-folio/vendor/bundle/ruby/3.3.0/gems/debug-1.10.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20241229-2607-uxkhvy sitelibdir\=./.gem.20241229-2607-uxkhvy clean
+
+current directory: /workspaces/al-folio/vendor/bundle/ruby/3.3.0/gems/debug-1.10.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20241229-2607-uxkhvy sitelibdir\=./.gem.20241229-2607-uxkhvy
+compiling debug.c
+compiling iseq_collector.c
+linking shared-object debug/debug.so
+
+current directory: /workspaces/al-folio/vendor/bundle/ruby/3.3.0/gems/debug-1.10.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20241229-2607-uxkhvy sitelibdir\=./.gem.20241229-2607-uxkhvy install
+/usr/bin/install -c -m 0755 debug.so ./.gem.20241229-2607-uxkhvy/debug
+
+current directory: /workspaces/al-folio/vendor/bundle/ruby/3.3.0/gems/debug-1.10.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20241229-2607-uxkhvy sitelibdir\=./.gem.20241229-2607-uxkhvy clean

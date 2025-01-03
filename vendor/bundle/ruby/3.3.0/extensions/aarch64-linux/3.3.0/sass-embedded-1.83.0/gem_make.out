@@ -1,0 +1,13 @@
+current directory: /workspaces/al-folio/vendor/bundle/ruby/3.3.0/gems/sass-embedded-1.83.0/ext/sass
+/usr/local/bin/ruby -rrubygems /workspaces/al-folio/vendor/bundle/ruby/3.3.0/gems/rake-13.2.1/exe/rake RUBYARCHDIR\=/workspaces/al-folio/vendor/bundle/ruby/3.3.0/extensions/aarch64-linux/3.3.0/sass-embedded-1.83.0 RUBYLIBDIR\=/workspaces/al-folio/vendor/bundle/ruby/3.3.0/extensions/aarch64-linux/3.3.0/sass-embedded-1.83.0
+gem install --force --install-dir /workspaces/al-folio/vendor/bundle/ruby/3.3.0/gems/sass-embedded-1.83.0/ext/sass/ruby --no-document --ignore-dependencies --platform aarch64-linux-gnu --version 1.83.0 sass-embedded
+fetch https://github.com/sass/dart-sass/releases/download/1.83.0/dart-sass-1.83.0-linux-arm64.tar.gz
+tar -vxC . -f dart-sass-1.83.0-linux-arm64.tar.gz --no-same-owner --no-same-permissions
+mv /workspaces/al-folio/vendor/bundle/ruby/3.3.0/gems/sass-embedded-1.83.0/ext/sass/ruby/gems/sass-embedded-1.83.0-aarch64-linux-gnu/ext/sass/dart-sass/sass dart-sass/sass
+rm -rf /workspaces/al-folio/vendor/bundle/ruby/3.3.0/gems/sass-embedded-1.83.0/ext/sass/ruby
+mkdir -p .
+dart-sass/src/LICENSE
+dart-sass/src/dart
+dart-sass/src/sass.snapshot
+dart-sass/sass
+rm dart-sass-1.83.0-linux-arm64.tar.gz

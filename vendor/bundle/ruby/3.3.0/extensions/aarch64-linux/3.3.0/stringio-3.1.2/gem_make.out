@@ -1,0 +1,18 @@
+current directory: /workspaces/al-folio/vendor/bundle/ruby/3.3.0/gems/stringio-3.1.2/ext/stringio
+/usr/local/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /workspaces/al-folio/vendor/bundle/ruby/3.3.0/gems/stringio-3.1.2/ext/stringio
+make DESTDIR\= sitearchdir\=./.gem.20241229-2607-lg6xx2 sitelibdir\=./.gem.20241229-2607-lg6xx2 clean
+
+current directory: /workspaces/al-folio/vendor/bundle/ruby/3.3.0/gems/stringio-3.1.2/ext/stringio
+make DESTDIR\= sitearchdir\=./.gem.20241229-2607-lg6xx2 sitelibdir\=./.gem.20241229-2607-lg6xx2
+compiling stringio.c
+linking shared-object stringio.so
+
+current directory: /workspaces/al-folio/vendor/bundle/ruby/3.3.0/gems/stringio-3.1.2/ext/stringio
+make DESTDIR\= sitearchdir\=./.gem.20241229-2607-lg6xx2 sitelibdir\=./.gem.20241229-2607-lg6xx2 install
+/usr/bin/install -c -m 0755 stringio.so ./.gem.20241229-2607-lg6xx2
+
+current directory: /workspaces/al-folio/vendor/bundle/ruby/3.3.0/gems/stringio-3.1.2/ext/stringio
+make DESTDIR\= sitearchdir\=./.gem.20241229-2607-lg6xx2 sitelibdir\=./.gem.20241229-2607-lg6xx2 clean
