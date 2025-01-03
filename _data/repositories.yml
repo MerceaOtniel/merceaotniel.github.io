@@ -1,0 +1,14 @@
+github_users:
+  - MerceaOtniel
+
+repo_description_lines_max: 2
+
+github_repos:
+  - ExplainableML/TCAF-GZSL
+  - ExplainableML/AVCA-GZSL
+  - ExplainableML/AVDIFF-GFSL
+  - bitpoke/mysql-operator
+  - MerceaOtniel/HybridAlpha
+  - ExplainableML/ReGaDa
+  - dkurzend/ClipClap-GZSL
+  - autonomousvision/plant

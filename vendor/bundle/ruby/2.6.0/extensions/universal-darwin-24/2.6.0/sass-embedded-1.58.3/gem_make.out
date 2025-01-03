@@ -1,0 +1,10 @@
+current directory: /Users/otnielmercea/Desktop/al-folio/vendor/bundle/ruby/2.6.0/gems/sass-embedded-1.58.3/ext/sass
+/System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/bin/ruby -rrubygems /Users/otnielmercea/Desktop/al-folio/vendor/bundle/ruby/2.6.0/gems/rake-13.2.1/exe/rake RUBYARCHDIR\=/Users/otnielmercea/Desktop/al-folio/vendor/bundle/ruby/2.6.0/extensions/universal-darwin-24/2.6.0/sass-embedded-1.58.3 RUBYLIBDIR\=/Users/otnielmercea/Desktop/al-folio/vendor/bundle/ruby/2.6.0/extensions/universal-darwin-24/2.6.0/sass-embedded-1.58.3
+fetch https://github.com/sass/dart-sass-embedded/releases/download/1.58.3/sass_embedded-1.58.3-macos-arm64.tar.gz
+mkdir -p .
+tar -vxC . -f sass_embedded-1.58.3-macos-arm64.tar.gz --no-same-owner --no-same-permissions
+x sass_embedded/src/LICENSE
+x sass_embedded/src/dart
+x sass_embedded/src/dart-sass-embedded.snapshot
+x sass_embedded/dart-sass-embedded
+rm sass_embedded-1.58.3-macos-arm64.tar.gz

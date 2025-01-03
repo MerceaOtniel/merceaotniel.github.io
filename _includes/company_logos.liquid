@@ -1,0 +1,93 @@
+<div class="company-logos">
+  <style>
+    .company-logos {
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      /* 8 equal columns */
+      gap: 10px;
+      /* Consistent gap between logos */
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+      width: 100%;
+      /* Full width container */
+      max-width: 960px;
+      /* Maximum width to fit 8 logos */
+    }
+    .company-logo {
+      width: 100%;
+      /* Full width of grid cell */
+      height: 60px;
+      object-fit: contain;
+      object-position: center;
+      padding: 0;
+      margin: 0;
+      filter: none !important;
+      -webkit-filter: none !important;
+      opacity: 0.9;
+      transition: opacity 0.3s ease
+      , transform 0.3s ease;
+    }
+    .company-logo-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .company-logo:hover {
+      opacity: 1;
+      transform: scale(1.05);
+      filter: none !important;
+      -webkit-filter: none !important;
+    }
+  </style>
+
+  <div class="company-logo-container">
+    <img
+      class="company-logo"
+      src="{{ '/assets/img/companies/deepmind_resize.png' | relative_url }}"
+      alt="Company 1">
+  </div>
+  <div class="company-logo-container">
+    <img
+      class="company-logo"
+      src="{{ '/assets/img/companies/google_resize.png' | relative_url }}"
+      alt="Company 2">
+  </div>
+  <div class="company-logo-container">
+    <img
+      class="company-logo"
+      src="{{ '/assets/img/companies/max_planck_resize.png' | relative_url }}"
+      alt="Company 3">
+  </div>
+  <div class="company-logo-container">
+    <img
+      class="company-logo"
+      src="{{ '/assets/img/companies/edinburgh_resize.png' | relative_url }}"
+      alt="Company 8">
+  </div>
+  <div class="company-logo-container">
+    <img
+      class="company-logo"
+      src="{{ '/assets/img/companies/tum_resize.png' | relative_url }}"
+      alt="Company 4">
+  </div>
+  <div class="company-logo-container">
+    <img
+      class="company-logo"
+      src="{{ '/assets/img/companies/tubingen_resize.png' | relative_url }}"
+      alt="Company 6">
+  </div>
+  <div class="company-logo-container">
+    <img
+      class="company-logo"
+      src="{{ '/assets/img/companies/helmholtz_resize.png' | relative_url }}"
+      alt="Company 5">
+  </div>
+  <div class="company-logo-container">
+    <img
+      class="company-logo"
+      src="{{ '/assets/img/companies/everseen_resize.jpeg' | relative_url }}"
+      alt="Company 7">
+  </div>
+  <br>
+</div>

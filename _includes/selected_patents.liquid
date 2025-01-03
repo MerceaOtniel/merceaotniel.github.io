@@ -1,0 +1,20 @@
+<style>
+  .highlight-type {
+    color: red;
+  }
+</style>
+
+<div class="publications">
+  {% bibliography --group_by none --query @*[type=patent && selected=true]* %}
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.publications li').forEach((element) => {
+      let text = element.innerHTML;
+      text = text.replace(/SPOTLIGHT @/g, '<span class="highlight-type">SPOTLIGHT</span> @');
+      text = text.replace(/ORAL @/g, '<span class="highlight-type">ORAL</span> @');
+      element.innerHTML = text;
+    });
+  });
+</script>

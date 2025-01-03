@@ -1,0 +1,9 @@
+current directory: /Users/otnielmercea/Desktop/al-folio/vendor/bundle/ruby/2.6.0/gems/libv8-3.16.14.19.1/ext/libv8
+/System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/bin/ruby -I /System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0 -r ./siteconf20241229-45122-1obs5mr.rb extconf.rb
+creating Makefile
+/Users/otnielmercea/Desktop/al-folio/vendor/bundle/ruby/2.6.0/gems/libv8-3.16.14.19.1/ext/libv8/builder.rb:86:in `setup_python!': libv8 requires python 2 to be installed in order to build, but it is currently 3.9.13 (RuntimeError)
+	from /Users/otnielmercea/Desktop/al-folio/vendor/bundle/ruby/2.6.0/gems/libv8-3.16.14.19.1/ext/libv8/builder.rb:53:in `build_libv8!'
+	from /Users/otnielmercea/Desktop/al-folio/vendor/bundle/ruby/2.6.0/gems/libv8-3.16.14.19.1/ext/libv8/location.rb:24:in `install!'
+	from extconf.rb:7:in `<main>'
+
+extconf failed, exit code 1
