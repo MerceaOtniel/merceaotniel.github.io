@@ -2,5 +2,4 @@
 _site/
 .jkeyll-metadata
 .DS_Store
-node_modules
 
