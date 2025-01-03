@@ -1,1 +1,0 @@
-User-agent: * Disallow: Sitemap: https://merceaotniel.github.io/sitemap.xml
