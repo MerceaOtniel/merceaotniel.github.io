@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-[AV-DIFF](https://arxiv.org/pdf/2309.03869) was accepted at DAGM GCPR 2023
+[AV-Diff](https://arxiv.org/pdf/2309.03869) was accepted at DAGM GCPR 2023
