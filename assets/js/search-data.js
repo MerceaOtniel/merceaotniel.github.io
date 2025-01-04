@@ -128,11 +128,18 @@ ninja.data = [{
           title: 'I have finished my 4 month internship at Google DeepMind. I have worked...',
           description: "",
           section: "News",},{
+        id: 'social-bluesky',
+        title: 'Bluesky',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://bsky.app/profile/merceaotniel.bsky.social", "_blank");
+        },
+      },{
         id: 'social-email',
         title: 'email',
         section: 'Socials',
         handler: () => {
-          window.open("mailto:%6F%74%69%6D%65%72%63%65%61@%67%6D%61%69%6C.%63%6F%6D", "_blank");
+          window.open("mailto:%6F%74%69%6D%65%72%63%65%61 (%61%74) %67%6D%61%69%6C.%63%6F%6D", "_blank");
         },
       },{
         id: 'social-github',
