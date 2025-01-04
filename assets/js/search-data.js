@@ -107,7 +107,7 @@ ninja.data = [{
           title: 'PlanT was accepted at CoRL 2022.',
           description: "",
           section: "News",},{id: "news-av-diff-was-accepted-at-dagm-gcpr-2023",
-          title: 'AV-DIFF was accepted at DAGM GCPR 2023',
+          title: 'AV-Diff was accepted at DAGM GCPR 2023',
           description: "",
           section: "News",},{id: "news-regada-was-accepted-as-an-oral-to-bmvc-2023",
           title: 'ReGAdA was accepted as an ORAL to BMVC 2023.',
