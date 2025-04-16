@@ -127,6 +127,9 @@ ninja.data = [{
           section: "News",},{id: "news-i-have-finished-my-4-month-internship-at-google-deepmind-i-have-worked-on-enhancing-sam-2-for-scenarios-involving-significant-occlusion-or-movement-under-the-supervision-of-stefano-pellegrini-jasper-uijlings-and-cordelia-schmid",
           title: 'I have finished my 4 month internship at Google DeepMind. I have worked...',
           description: "",
+          section: "News",},{id: "news-i-am-pleased-to-share-that-i-have-successfully-defended-my-phd-dissertation",
+          title: 'I am pleased to share that I have successfully defended my PhD dissertation....',
+          description: "",
           section: "News",},{
         id: 'social-bluesky',
         title: 'Bluesky',
