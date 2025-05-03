@@ -166,6 +166,13 @@ ninja.data = [{
           window.open("https://www.linkedin.com/in/otnielmercea", "_blank");
         },
       },{
+        id: 'social-researchgate',
+        title: 'ResearchGate',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://www.researchgate.net/profile/Otniel-Bogdan-Mercea/", "_blank");
+        },
+      },{
         id: 'social-scholar',
         title: 'Google Scholar',
         section: 'Socials',
