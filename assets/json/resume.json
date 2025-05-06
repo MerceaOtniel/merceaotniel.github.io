@@ -1,6 +1,14 @@
 {
   "work": [
     {
+      "name": "Apple",
+      "position": "Computer Vision Applied Research Scientist",
+      "startDate": "2025-05",
+      "endDate": "",
+      "summary": "Research on multimodal learning"
+    },
+
+    {
       "name": "Google DeepMind",
       "position": "Research Intern",
       "startDate": "2024-09",
