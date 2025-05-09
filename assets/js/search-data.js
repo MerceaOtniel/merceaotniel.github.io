@@ -130,8 +130,8 @@ ninja.data = [{
           section: "News",},{id: "news-i-am-pleased-to-share-that-i-have-successfully-defended-my-phd-dissertation",
           title: 'I am pleased to share that I have successfully defended my PhD dissertation....',
           description: "",
-          section: "News",},{id: "news-thrilled-to-begin-my-journey-at-apple-as-a-computer-vision-applied-research-scientist",
-          title: 'Thrilled to begin my journey at Apple as a Computer Vision Applied Research...',
+          section: "News",},{id: "news-thrilled-to-begin-my-journey-at-apple-as-a-machine-learning-researcher",
+          title: 'Thrilled to begin my journey at Apple as a Machine Learning Researcher.',
           description: "",
           section: "News",},{
         id: 'social-bluesky',
