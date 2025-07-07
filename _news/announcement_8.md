@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-[LoSA](https://arxiv.org/pdf/2402.02887) was accepted as a <span style="color: red;">SPOTLIGHT</span> at CVPR 2024.
+[LoSA](https://arxiv.org/pdf/2402.02887) was accepted as a <span style="color: red;">HIGHLIGHT</span> at CVPR 2024.

@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   document.querySelectorAll(".bibliography > li").forEach((element) => {
     let text = element.innerHTML;
-    text = text.replace(/SPOTLIGHT @/g, '<span class="highlight-type">SPOTLIGHT</span> @');
+    text = text.replace(/HIGHLIGHT @/g, '<span class="highlight-type">HIGHLIGHT</span> @');
     text = text.replace(/ORAL @/g, '<span class="highlight-type">ORAL</span> @');
     element.innerHTML = text;
   });
