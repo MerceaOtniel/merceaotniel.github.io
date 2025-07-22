@@ -314,9 +314,10 @@
               aria-label="Google Scholar link"
               role="button"
             >
+              {% assign citation = site.data.citations[entry.google_scholar_id] | default: 'N/A' %}
               <img
-                src="https://img.shields.io/badge/scholar-{% google_scholar_citations site.data.socials.scholar_userid entry.google_scholar_id %}-4285F4?logo=googlescholar&labelColor=beige"
-                alt="{% google_scholar_citations site.data.socials.scholar_userid entry.google_scholar_id %} Google Scholar citations"
+                src="https://img.shields.io/badge/scholar-{{ citation }}-4285F4?logo=googlescholar&labelColor=beige"
+                alt="{{ citation }} Google Scholar citations"
               >
             </a>
           {% endif %}

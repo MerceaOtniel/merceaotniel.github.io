@@ -1,0 +1,33 @@
+#!/usr/bin/env ruby
+require 'yaml'
+require 'nokogiri'
+require 'open-uri'
+require 'bibtex'
+
+SCHOLAR_ID = YAML.load_file('_data/socials.yml')['scholar_userid']
+BIB_FILE   = '_bibliography/papers.bib'
+DATA_FILE  = '_data/citations.yml'
+
+bib = BibTeX.open(BIB_FILE)
+citations = {}
+
+bib.each do |entry|
+  next unless entry['google_scholar_id']
+  id = entry['google_scholar_id'].to_s
+  url = "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=#{SCHOLAR_ID}&citation_for_view=#{SCHOLAR_ID}:#{id}"
+  begin
+    # Use a generic User-Agent so Google Scholar doesn't reject the request
+    doc = Nokogiri::HTML(URI.open(url, 'User-Agent' => 'Mozilla/5.0'))
+    meta = doc.at("meta[name='description']") || doc.at("meta[property='og:description']")
+    citation = meta && meta['content'][/Cited by (\d+[\d,]*)/, 1]
+    citation = citation ? citation.delete(',').to_i : 'N/A'
+  rescue => e
+    warn "Failed to fetch citations for #{id}: #{e}"
+    citation = 'N/A'
+  end
+  citations[id] = citation
+  sleep rand(1..3)
+end
+
+File.open(DATA_FILE, 'w') { |f| f.write citations.to_yaml }
+puts "Updated #{DATA_FILE}"
