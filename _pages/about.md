@@ -20,7 +20,7 @@ selected_patents: true # includes a list of patents marked as "selected={patents
 social: true # includes social icons at the bottom of the page
 ---
 
-Currently, I am a Machine Learning Researcher at [Apple](https://www.apple.com/careers/uk/teams/software-and-services.html), working on multimodal learning.
+Currently, I am a Machine Learning Researcher at [Apple](https://www.apple.com/careers/uk/teams/software-and-services.html), working on multimodal learning. 
 
 I did my PhD in CS with a specialization in AI at the [Max Planck Institute for Intelligent Systems](https://is.mpg.de/) and the [University of Tubingen](https://uni-tuebingen.de/en/), supervised by [Prof. Zeynep Akata](https://scholar.google.com/citations?user=jQl9RtkAAAAJ&hl=en) and [Prof. Andreas Geiger](https://scholar.google.ca/citations?user=SrVnrPcAAAAJ&hl=en) within the [IMPRS-IS doctoral program](https://imprs.is.mpg.de/). I was also a guest PhD student at [Helmholtz Munich](https://www.helmholtz-munich.de/en) and [Technical University of Munich](https://www.tum.de/en/), supervised by [Prof. Zeynep Akata](https://scholar.google.com/citations?user=jQl9RtkAAAAJ&hl=en). I earned my MSc in AI from the [University of Edinburgh](https://www.ed.ac.uk/) in 2020, with a MSc thesis supervised by [Prof. Amos Storkey](https://scholar.google.com/citations?user=3Rlc8EAAAAAJ&hl=en), and my BEng in Computers and Information technology from [Politehnica University of Timisoara](https://www.upt.ro/Universitatea-Politehnica-Timisoara_en.html) in 2019, with a BEng thesis supervised by [Prof. Calin-Adrian Popa](https://scholar.google.ro/citations?user=U6prQIkAAAAJ&hl=en).
 
