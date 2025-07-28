@@ -1,6 +1,7 @@
 require "active_support/all"
 require 'nokogiri'
 require 'open-uri'
+require 'json'
 
 module Helpers
   extend ActiveSupport::NumberHelper
@@ -8,7 +9,31 @@ end
 
 module Jekyll
   class GoogleScholarCitationsTag < Liquid::Tag
-    Citations = { }
+    Citations = {}
+    CACHE_FILE = '.google-scholar-citations.json'
+    FETCH_ALLOWED = Jekyll.env != 'production'
+
+    def self.load_cache(site)
+      cache_path = File.join(site.source, CACHE_FILE)
+      if File.exist?(cache_path)
+        begin
+          data = JSON.parse(File.read(cache_path))
+          Citations.merge!(data)
+        rescue StandardError => e
+          puts "Error loading Google Scholar cache: #{e.class} - #{e.message}"
+        end
+      end
+      site.config['google_scholar_cache_path'] = cache_path
+    end
+
+    def self.save_cache(site)
+      cache_path = site.config['google_scholar_cache_path'] || File.join(site.source, CACHE_FILE)
+      begin
+        File.write(cache_path, JSON.pretty_generate(Citations))
+      rescue StandardError => e
+        puts "Error saving Google Scholar cache: #{e.class} - #{e.message}"
+      end
+    end
 
     def initialize(tag_name, params, tokens)
       super
@@ -31,9 +56,14 @@ module Jekyll
       article_url = "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=#{scholar_id}&citation_for_view=#{scholar_id}:#{article_id}"
 
       begin
-          # If the citation count has already been fetched, return it
+          # If we already have the citation count cached, return it
           if GoogleScholarCitationsTag::Citations[article_id]
             return GoogleScholarCitationsTag::Citations[article_id]
+          end
+
+          # Skip fetching in production builds and return cached value or N/A
+          unless FETCH_ALLOWED
+            return GoogleScholarCitationsTag::Citations[article_id] || "N/A"
           end
 
           # Sleep for a random amount of time to avoid being blocked
@@ -83,3 +113,12 @@ module Jekyll
 end
 
 Liquid::Template.register_tag('google_scholar_citations', Jekyll::GoogleScholarCitationsTag)
+
+# Load cache once Jekyll initializes and save it after the site is written
+Jekyll::Hooks.register :site, :after_init do |site|
+  Jekyll::GoogleScholarCitationsTag.load_cache(site)
+end
+
+Jekyll::Hooks.register :site, :post_write do |site|
+  Jekyll::GoogleScholarCitationsTag.save_cache(site)
+end
