@@ -9,7 +9,7 @@ Jekyll::Hooks.register :site, :after_init do |site|
   font_file_types = ['otf', 'ttf', 'woff', 'woff2']
   image_file_types = ['.gif', '.jpg', '.jpeg', '.png', '.webp']
 
-  def download_and_change_rule_set_url(rule_set, rule, dest, dirname, config, file_types)
+  def download_and_change_rule_set_url(rule_set, rule, dest, dirname, config, file_types, base_url)
     # check if the rule has a url
     if rule_set[rule].include?('url(')
       # get the file url
@@ -25,8 +25,8 @@ Jekyll::Hooks.register :site, :after_init do |site|
       # verify if the file is of the correct type
       if file_name.end_with?(*file_types)
         # fix the url if it is not an absolute url
-        unless url.start_with?('https://')
-          url = URI.join(url, url).to_s
+        unless URI.parse(url).absolute?
+          url = URI.join(base_url, url).to_s
         end
 
         # download the file
@@ -90,19 +90,19 @@ Jekyll::Hooks.register :site, :after_init do |site|
 
     # only download fonts if the directory doesn't exist or is empty
     unless File.directory?(dest) && !Dir.empty?(dest)
-      puts "Downloading fonts from #{url} to #{dest}"
-      # get available fonts from the url
-      doc = Nokogiri::HTML(URI.open(url, "User-Agent" => "Ruby/#{RUBY_VERSION}"))
-      doc.css('a').each do |link|
-        # get the file name from the url
-        file_name = link['href'].split('/').last.split('?').first
+        puts "Downloading fonts from #{url} to #{dest}"
+        # get available fonts from the url
+        doc = Nokogiri::HTML(URI.open(url, "User-Agent" => "Ruby/#{RUBY_VERSION}"))
+        doc.css('a').each do |link|
+          # get the file name from the url
+          file_name = link['href'].split('/').last.split('?').first
 
-        # verify if the file is a font file
-        if file_name.end_with?(*file_types)
-          # download the file and change the url to the local file
-          download_file(URI.join(url, link['href']).to_s, File.join(dest, file_name))
+          # verify if the file is a font file
+          if file_name.end_with?(*file_types)
+            # download the file and change the url to the local file
+            download_file(URI.join(url, link['href']).to_s, File.join(dest, file_name))
+          end
         end
-      end
     end
   end
 
@@ -115,18 +115,18 @@ Jekyll::Hooks.register :site, :after_init do |site|
     # only download images if the directory doesn't exist or is empty
     unless File.directory?(dest) && !Dir.empty?(dest)
       puts "Downloading images from #{url} to #{dest}"
-      # get available fonts from the url
-      doc = Nokogiri::HTML(URI.open(url, "User-Agent" => "Ruby/#{RUBY_VERSION}"))
-      doc.xpath('/html/body/div/div[3]/table/tbody/tr/td[1]/a').each do |link|
-        # get the file name from the url
-        file_name = link['href'].split('/').last.split('?').first
+        # get available images from the url
+        doc = Nokogiri::HTML(URI.open(url, "User-Agent" => "Ruby/#{RUBY_VERSION}"))
+        doc.xpath('/html/body/div/div[3]/table/tbody/tr/td[1]/a').each do |link|
+          # get the file name from the url
+          file_name = link['href'].split('/').last.split('?').first
 
-        # verify if the file is a font file
-        if file_name.end_with?(*file_types)
-          # download the file and change the url to the local file
-          download_file(URI.join(url, link['href']).to_s, File.join(dest, file_name))
+          # verify if the file is an image file
+          if file_name.end_with?(*file_types)
+            # download the file and change the url to the local file
+            download_file(URI.join(url, link['href']).to_s, File.join(dest, file_name))
+          end
         end
-      end
     end
   end
 
@@ -155,7 +155,7 @@ Jekyll::Hooks.register :site, :after_init do |site|
       # get the font-face rules
       css.each_rule_set do |rule_set|
         # check if the rule set has a url
-        download_and_change_rule_set_url(rule_set, 'src', File.join(dest, 'fonts'), File.join(lib_name, 'fonts'), config, file_types)
+          download_and_change_rule_set_url(rule_set, 'src', File.join(dest, 'fonts'), File.join(lib_name, 'fonts'), config, file_types, url)
       end
 
       # save the modified css file
@@ -229,7 +229,7 @@ Jekyll::Hooks.register :site, :after_init do |site|
               end
 
             elsif type == 'images'
-              # download the font files and change the url to the local file
+              # download the image files and change the url to the local file
               download_images(url, File.join(site.source, 'assets', 'libs', key, site.config['third_party_libraries'][key]['local'][type]), image_file_types)
 
             else
