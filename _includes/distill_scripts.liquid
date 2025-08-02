@@ -5,7 +5,7 @@
   crossorigin="anonymous"
 ></script>
 
-<!-- Bootsrap & MDB scripts -->
+<!-- Bootstrap & MDB scripts -->
 <script src="{{ '/assets/js/bootstrap.bundle.min.js' | relative_url }}"></script>
 <script
   src="{{ site.third_party_libraries.mdb.url.js }}"
@@ -29,7 +29,11 @@
       crossorigin="anonymous"
     ></script>
   {% endif %}
-  <script defer src="{{ '/assets/js/mermaid-setup.js' | relative_url | bust_file_cache }}" type="text/javascript"></script>
+  <script
+    defer
+    src="{{ '/assets/js/mermaid-setup.js' | relative_url | bust_file_cache }}"
+    type="text/javascript"
+  ></script>
 {% endif %}
 
 {% if page.code_diff %}
@@ -40,7 +44,11 @@
     integrity="{{ site.third_party_libraries.diff2html.integrity.js }}"
     crossorigin="anonymous"
   ></script>
-  <script defer src="{{ '/assets/js/diff2html-setup.js' | relative_url | bust_file_cache }}" type="text/javascript"></script>
+  <script
+    defer
+    src="{{ '/assets/js/diff2html-setup.js' | relative_url | bust_file_cache }}"
+    type="text/javascript"
+  ></script>
 {% endif %}
 
 {% if page.map %}
@@ -50,7 +58,11 @@
     integrity="{{ site.third_party_libraries.leaflet.integrity.js }}"
     crossorigin="anonymous"
   ></script>
-  <script defer src="{{ '/assets/js/leaflet-setup.js' | relative_url | bust_file_cache }}" type="text/javascript"></script>
+  <script
+    defer
+    src="{{ '/assets/js/leaflet-setup.js' | relative_url | bust_file_cache }}"
+    type="text/javascript"
+  ></script>
 {% endif %}
 
 {% if page.chart and page.chart.chartjs %}
@@ -61,7 +73,11 @@
     integrity="{{ site.third_party_libraries.chartjs.integrity.js }}"
     crossorigin="anonymous"
   ></script>
-  <script defer src="{{ '/assets/js/chartjs-setup.js' | relative_url | bust_file_cache }}" type="text/javascript"></script>
+  <script
+    defer
+    src="{{ '/assets/js/chartjs-setup.js' | relative_url | bust_file_cache }}"
+    type="text/javascript"
+  ></script>
 {% endif %}
 
 {% if page.chart and page.chart.echarts %}
@@ -78,7 +94,11 @@
       crossorigin="anonymous"
     ></script>
   {% endif %}
-  <script defer src="{{ '/assets/js/echarts-setup.js' | relative_url | bust_file_cache }}" type="text/javascript"></script>
+  <script
+    defer
+    src="{{ '/assets/js/echarts-setup.js' | relative_url | bust_file_cache }}"
+    type="text/javascript"
+  ></script>
 {% endif %}
 
 {% if page.chart and page.chart.vega_lite %}
@@ -207,7 +227,11 @@
 
 {% if site.enable_progressbar %}
   <!-- Scrolling Progress Bar -->
-  <script defer src="{{ '/assets/js/progress-bar.js' | relative_url | bust_file_cache }}" type="text/javascript"></script>
+  <script
+    defer
+    src="{{ '/assets/js/progress-bar.js' | relative_url | bust_file_cache }}"
+    type="text/javascript"
+  ></script>
 {% endif %}
 
 {% if page.images %}
@@ -253,7 +277,11 @@
       integrity="{{ site.third_party_libraries.venobox.integrity.js }}"
       crossorigin="anonymous"
     ></script>
-    <script defer src="{{ '/assets/js/venobox-setup.js' | relative_url | bust_file_cache }}" type="text/javascript"></script>
+    <script
+      defer
+      src="{{ '/assets/js/venobox-setup.js' | relative_url | bust_file_cache }}"
+      type="text/javascript"
+    ></script>
   {% endif %}
 {% endif %}
 

@@ -23,10 +23,19 @@ module ExternalPosts
     end
 
     def fetch_from_rss(site, src)
-      xml = HTTParty.get(src['rss_url']).body
-      return if xml.nil?
-      feed = Feedjira.parse(xml)
-      process_entries(site, src, feed.entries)
+      begin
+        response = HTTParty.get(src['rss_url'])
+        unless response.success?
+          puts "Failed to fetch RSS feed: #{response.code} #{response.message}"
+          return
+        end
+        xml = response.body
+        return if xml.nil?
+        feed = Feedjira.parse(xml)
+        process_entries(site, src, feed.entries)
+      rescue StandardError => e
+        puts "Error fetching RSS feed: #{e.class} - #{e.message}"
+      end
     end
 
     def process_entries(site, src, entries)
@@ -86,19 +95,29 @@ module ExternalPosts
     end
 
     def fetch_content_from_url(url)
-      html = HTTParty.get(url).body
-      parsed_html = Nokogiri::HTML(html)
+      begin
+        response = HTTParty.get(url)
+        unless response.success?
+          puts "Failed to fetch content from #{url}: #{response.code} #{response.message}"
+          return { title: '', content: '', summary: '' }
+        end
+        html = response.body
+        parsed_html = Nokogiri::HTML(html)
 
-      title = parsed_html.at('head title')&.text.strip || ''
-      description = parsed_html.at('head meta[name="description"]')&.attr('content') || ''
-      body_content = parsed_html.at('body')&.inner_html || ''
+        title = parsed_html.at('head title')&.text.strip || ''
+        description = parsed_html.at('head meta[name="description"]')&.attr('content') || ''
+        body_content = parsed_html.at('body')&.inner_html || ''
 
-      {
-        title: title,
-        content: body_content,
-        summary: description
-        # Note: The published date is now added in the fetch_from_urls method.
-      }
+        {
+          title: title,
+          content: body_content,
+          summary: description
+          # Note: The published date is now added in the fetch_from_urls method.
+        }
+      rescue StandardError => e
+        puts "Error fetching URL #{url}: #{e.class} - #{e.message}"
+        { title: '', content: '', summary: '' }
+      end
     end
 
   end
