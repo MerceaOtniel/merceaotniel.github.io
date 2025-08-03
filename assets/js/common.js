@@ -1,20 +1,34 @@
-$(document).ready(function () {
+function initToggles() {
   // add toggle functionality to abstract, award and bibtex buttons
-  $("a.abstract").click(function () {
-    $(this).parent().parent().find(".abstract.hidden").toggleClass("open");
-    $(this).parent().parent().find(".award.hidden.open").toggleClass("open");
-    $(this).parent().parent().find(".bibtex.hidden.open").toggleClass("open");
-  });
-  $("a.award").click(function () {
-    $(this).parent().parent().find(".abstract.hidden.open").toggleClass("open");
-    $(this).parent().parent().find(".award.hidden").toggleClass("open");
-    $(this).parent().parent().find(".bibtex.hidden.open").toggleClass("open");
-  });
-  $("a.bibtex").click(function () {
-    $(this).parent().parent().find(".abstract.hidden.open").toggleClass("open");
-    $(this).parent().parent().find(".award.hidden.open").toggleClass("open");
-    $(this).parent().parent().find(".bibtex.hidden").toggleClass("open");
-  });
+  $("a.abstract")
+    .off("click")
+    .on("click", function () {
+      $(this).parent().parent().find(".abstract.hidden").toggleClass("open");
+      $(this).parent().parent().find(".award.hidden.open").toggleClass("open");
+      $(this).parent().parent().find(".bibtex.hidden.open").toggleClass("open");
+    });
+  $("a.award")
+    .off("click")
+    .on("click", function () {
+      $(this)
+        .parent()
+        .parent()
+        .find(".abstract.hidden.open")
+        .toggleClass("open");
+      $(this).parent().parent().find(".award.hidden").toggleClass("open");
+      $(this).parent().parent().find(".bibtex.hidden.open").toggleClass("open");
+    });
+  $("a.bibtex")
+    .off("click")
+    .on("click", function () {
+      $(this)
+        .parent()
+        .parent()
+        .find(".abstract.hidden.open")
+        .toggleClass("open");
+      $(this).parent().parent().find(".award.hidden.open").toggleClass("open");
+      $(this).parent().parent().find(".bibtex.hidden").toggleClass("open");
+    });
   $("a").removeClass("waves-effect waves-light");
 
   // bootstrap-toc
@@ -56,4 +70,6 @@ $(document).ready(function () {
   $('[data-toggle="popover"]').popover({
     trigger: "hover",
   });
-});
+}
+$(document).ready(initToggles);
+window.addEventListener("pageshow", initToggles);
