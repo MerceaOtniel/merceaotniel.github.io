@@ -1,0 +1,15 @@
+# Limit the build context to just what the Dockerfile needs
+# Everything is ignored by default so only whitelisted files are sent
+**
+
+# Allow Docker build metadata
+!Dockerfile
+!.dockerignore
+
+# Dependency manifests required during the build
+!Gemfile
+!Gemfile.lock
+
+# Runtime entrypoint script copied in the Dockerfile
+!bin/
+!bin/entry_point.sh
