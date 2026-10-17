@@ -7,6 +7,7 @@ nav: false
 nav_order: 9
 ---
 
+- Apple AIML Fellowship Program 2027
 - ICLR 2024
 - TPAMI 2023
 - NeurIPS 2023
